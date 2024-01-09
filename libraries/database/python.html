@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Python API &mdash; RPA Framework  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/iframeResizer.min.js"></script>
+        <script src="../../_static/custom.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Desktop" href="../desktop/index.html" />
+    <link rel="prev" title="Database" href="index.html" />
+	<!-- Cookie consent -->
+<link async rel="stylesheet" type="text/css" href="../../_static/cookie.css"/>
+<script async src="../../_static/cookie.js"></script>
+<!-- Robocorp banner -->
+<link async rel="stylesheet" type="text/css" href="../../_static/robocorp.css"/>
+<script async src="../../_static/robocorp.js"></script>
+<!--            -->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-151433780-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-151433780-3');
+</script>
+<!--            -->
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            RPA Framework
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Libraries</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../archive/index.html">Archive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assistant/index.html">Assistant</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../browser/index.html">Browser</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../browser_playwright/index.html">Browser.Playwright</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../browser_selenium/index.html">Browser.Selenium</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../calendar/index.html">Calendar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cloud_aws/index.html">Cloud.AWS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cloud_azure/index.html">Cloud.Azure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cloud_google/index.html">Cloud.Google</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../crypto/index.html">Crypto</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Database</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Python API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../desktop/index.html">Desktop</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../desktop_clipboard/index.html">Desktop.Clipboard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../desktop_operatingsystem/index.html">Desktop.OperatingSystem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../desktop_windows/index.html">Desktop.Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentai/index.html">DocumentAI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentai_base64ai/index.html">DocumentAI.Base64AI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentai_nanonets/index.html">DocumentAI.Nanonets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../email_exchange/index.html">Email.Exchange</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../email_imapsmtp/index.html">Email.ImapSmtp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../excel_application/index.html">Excel.Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../excel_files/index.html">Excel.Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../filesystem/index.html">FileSystem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ftp/index.html">FTP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../http/index.html">HTTP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hubspot/index.html">HubSpot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../images/index.html">Images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javaaccessbridge/index.html">JavaAccessBridge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../json/index.html">JSON</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mfa/index.html">MFA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../msgraph/index.html">MSGraph</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../netsuite/index.html">Netsuite</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notifier/index.html">Notifier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openai/index.html">OpenAI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../outlook_application/index.html">Outlook.Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pdf/index.html">PDF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../robocorp_process/index.html">Robocorp.Process</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../robocorp_storage/index.html">Robocorp.Storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../robocorp_vault/index.html">Robocorp.Vault</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../robocorp_workitems/index.html">Robocorp.WorkItems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../robotloglistener/index.html">RobotLogListener</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../salesforce/index.html">Salesforce</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sap/index.html">SAP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../slack/index.html">Slack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../smartsheet/index.html">Smartsheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tables/index.html">Tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/index.html">Tasks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../twitter/index.html">Twitter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../windows/index.html">Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../word_application/index.html">Word.Application</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Project</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../releasenotes.html">Release notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/guide.html">Contribution guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/conventions.html">Project conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/todos.html">TODO</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">RPA Framework</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Database</a></li>
+      <li class="breadcrumb-item active">Python API</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/libraries/database/python.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+	
+           <div itemprop="articleBody">
+             
+  <div class="section" id="python-api">
+<h1>Python API<a class="headerlink" href="#python-api" title="Permalink to this heading"></a></h1>
+<div class="section" id="database">
+<h2>Database<a class="headerlink" href="#database" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="RPA.Database.Database">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">RPA.Database.</span></span><span class="sig-name descname"><span class="pre">Database</span></span><a class="headerlink" href="#RPA.Database.Database" title="Permalink to this definition"></a></dt>
+<dd><p><cite>Database</cite> is a library for handling different database operations.</p>
+<p>All database operations are supported. Keywords <cite>Query</cite> and <cite>Get Rows</cite>
+return values by default in <cite>RPA.Table</cite> format.</p>
+<p>Library is compatible with any Database API Specification 2.0 module.</p>
+<p><strong>Workaround for inserting large JSON data for Call Stored Procedure</strong></p>
+<p>Workaround is to use instead <cite>Query</cite> keyword. At the moment there is
+no known fix for the <cite>Call Stored Procedure</cite> keyword as it fails if
+JSON string is more than 8000 characters long.</p>
+<p><strong>Robot Framework</strong></p>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="c">${data}=</span><span class="p">    </span><span class="c">Load JSON from file</span><span class="p">    </span><span class="c">random_data.json</span>
+<span class="c">${json}=</span><span class="p">    </span><span class="c">Convert JSON to String</span><span class="p">    </span><span class="c">${data}</span>
+<span class="c"># Single quotes around ${json} string are necessary</span>
+<span class="c">Query</span><span class="p">    </span><span class="c">exec InsertJsonDataToSampleTable &#39;${json}&#39;</span>
+</pre></div>
+</div>
+<p>References:</p>
+<ul class="simple">
+<li><p>Database API Specification 2.0 - <a class="reference external" href="http://www.python.org/dev/peps/pep-0249/">http://www.python.org/dev/peps/pep-0249/</a></p></li>
+<li><p>Lists of DB API 2.0 - <a class="reference external" href="http://wiki.python.org/moin/DatabaseInterfaces">http://wiki.python.org/moin/DatabaseInterfaces</a></p></li>
+<li><p>Python Database Programming - <a class="reference external" href="http://wiki.python.org/moin/DatabaseProgramming/">http://wiki.python.org/moin/DatabaseProgramming/</a></p></li>
+</ul>
+<p><strong>Examples</strong></p>
+<p><strong>Robot Framework</strong></p>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="gh">*** Settings ***</span>
+<span class="kn">Library</span><span class="p">         </span><span class="nn">RPA.Database</span>
+
+<span class="gh">*** Tasks ***</span>
+<span class="gu">Get Orders From Database</span>
+<span class="p">    </span><span class="nf">Connect To Database</span><span class="p">  </span><span class="s">pymysql</span><span class="p">  </span><span class="s">tester</span><span class="p">  </span><span class="s">user</span><span class="p">  </span><span class="s">password</span><span class="p">  </span><span class="s">127.0.0.1</span>
+<span class="p">    @{</span><span class="nv">orders</span><span class="p">}            </span><span class="nf">Query</span><span class="p">    </span><span class="s">Select * FROM incoming_orders</span>
+<span class="p">    FOR   ${</span><span class="nv">order</span><span class="p">}  IN  @{</span><span class="nv">orders</span><span class="p">}</span>
+<span class="p">        </span><span class="nf">Handle Order</span><span class="p">  ${</span><span class="nv">order</span><span class="p">}</span>
+<span class="p">    END</span>
+</pre></div>
+</div>
+<p><strong>Python</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">RPA.Database</span> <span class="kn">import</span> <span class="n">Database</span>
+<span class="kn">from</span> <span class="nn">RPA.Robocorp.Vault</span> <span class="kn">import</span> <span class="n">FileSecrets</span>
+
+<span class="n">filesecrets</span> <span class="o">=</span> <span class="n">FileSecrets</span><span class="p">(</span><span class="s2">&quot;secrets.json&quot;</span><span class="p">)</span>
+<span class="n">secrets</span> <span class="o">=</span> <span class="n">filesecrets</span><span class="o">.</span><span class="n">get_secret</span><span class="p">(</span><span class="s2">&quot;databasesecrets&quot;</span><span class="p">)</span>
+
+<span class="n">db</span> <span class="o">=</span> <span class="n">Database</span><span class="p">()</span>
+<span class="n">db</span><span class="o">.</span><span class="n">connect_to_database</span><span class="p">(</span><span class="s1">&#39;pymysql&#39;</span><span class="p">,</span>
+                    <span class="n">secrets</span><span class="p">[</span><span class="s2">&quot;DATABASE&quot;</span><span class="p">],</span>
+                    <span class="n">secrets</span><span class="p">[</span><span class="s2">&quot;USERNAME&quot;</span><span class="p">],</span>
+                    <span class="n">secrets</span><span class="p">[</span><span class="s2">&quot;PASSWORD&quot;</span><span class="p">],</span>
+                    <span class="s1">&#39;127.0.0.1&#39;</span>
+                    <span class="p">)</span>
+<span class="n">orders</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM incoming_orders&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">order</span> <span class="ow">in</span> <span class="n">orders</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">order</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="RPA.Database.Database.ROBOT_LIBRARY_DOC_FORMAT">
+<span class="sig-name descname"><span class="pre">ROBOT_LIBRARY_DOC_FORMAT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'REST'</span></em><a class="headerlink" href="#RPA.Database.Database.ROBOT_LIBRARY_DOC_FORMAT" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="RPA.Database.Database.ROBOT_LIBRARY_SCOPE">
+<span class="sig-name descname"><span class="pre">ROBOT_LIBRARY_SCOPE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'GLOBAL'</span></em><a class="headerlink" href="#RPA.Database.Database.ROBOT_LIBRARY_SCOPE" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.Database.Database.call_stored_procedure">
+<span class="sig-name descname"><span class="pre">call_stored_procedure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sanstran</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">as_table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multiple</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">Table</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#RPA.Database.Database.call_stored_procedure" title="Permalink to this definition"></a></dt>
+<dd><p>Call stored procedure with name and params.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – procedure name</p></li>
+<li><p><strong>params</strong> – parameters for the procedure as a list, defaults to None</p></li>
+<li><p><strong>sanstran</strong> – Run the query without an implicit transaction commit or
+rollback if such additional action was detected. (turned off by default)</p></li>
+<li><p><strong>as_table</strong> – If the result should be an instance of <cite>Table</cite>, otherwise a
+<cite>list</cite> will be returned. (defaults to <cite>True</cite>)</p></li>
+<li><p><strong>multiple</strong> – Return results for one result set (default <cite>False</cite>) or multiple
+results from all result sets (set this parameter to <cite>True</cite>)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list of results</p>
+</dd>
+</dl>
+<p>Example:</p>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="c">@{params}</span><span class="p">     </span><span class="c">Create List</span><span class="p">   </span><span class="c">FirstParam</span><span class="p">   </span><span class="c">SecondParam</span><span class="p">   </span><span class="c">ThirdParam</span>
+<span class="c">@{results}</span><span class="p">    </span><span class="c">Call Stored Procedure</span><span class="p">   </span><span class="c">mystpr</span><span class="p">  </span><span class="c">${params}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.Database.Database.connect_to_database">
+<span class="sig-name descname"><span class="pre">connect_to_database</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">module_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">database</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">username</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">host</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">charset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'db.cfg'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autocommit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#RPA.Database.Database.connect_to_database" title="Permalink to this definition"></a></dt>
+<dd><p>Connect to database using DB API 2.0 module.</p>
+<p><strong>Note.</strong> The SSL support had been added for <cite>mysql</cite>
+module in <cite>rpaframework==17.7.0</cite>. The extra configuration
+parameters can be given via configuration file. Extra
+parameters are:</p>
+<ul class="simple">
+<li><p>ssl_ca</p></li>
+<li><p>ssl_cert</p></li>
+<li><p>ssl_key</p></li>
+<li><p>client_flags</p></li>
+</ul>
+<p>Example configuration file:</p>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[default]</span>
+<span class="na">host</span><span class="o">=</span><span class="s">hostname.mysql.database.azure.com</span>
+<span class="na">port</span><span class="o">=</span><span class="s">3306</span>
+<span class="na">username</span><span class="o">=</span><span class="s">username@hostname</span>
+<span class="na">database</span><span class="o">=</span><span class="s">databasename</span>
+<span class="na">client_flags</span><span class="o">=</span><span class="s">SSL,FOUND_ROWS</span>
+<span class="na">ssl_ca</span><span class="o">=</span><span class="s">DigiCertGlobalRootG2.crt.pem</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>module_name</strong> – database module to use</p></li>
+<li><p><strong>database</strong> – name of the database</p></li>
+<li><p><strong>username</strong> – of the user accessing the database</p></li>
+<li><p><strong>password</strong> – of the user accessing the database</p></li>
+<li><p><strong>host</strong> – SQL server address</p></li>
+<li><p><strong>port</strong> – SQL server port</p></li>
+<li><p><strong>charset</strong> – for example, “utf-8”, defaults to None</p></li>
+<li><p><strong>config_file</strong> – location of configuration file, defaults to “db.cfg”</p></li>
+<li><p><strong>autocommit</strong> – set autocommit value for connect</p></li>
+</ul>
+</dd>
+</dl>
+<p>Example:</p>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="c">Connect To Database</span><span class="p">  </span><span class="c">pymysql</span><span class="p">  </span><span class="c">database</span><span class="p">  </span><span class="c">username</span><span class="p">  </span><span class="c">password</span><span class="p">  </span><span class="c">host</span><span class="p">  </span><span class="c">port</span>
+<span class="c">Connect To Database</span><span class="p">  </span><span class="c">${CURDIR}${/}resources${/}dbconfig.cfg</span>
+
+<span class="c">${secrets}=</span><span class="p">    </span><span class="c">Get Secret</span><span class="p">    </span><span class="c">azuredb</span>
+<span class="c">Connect To Database</span>
+<span class="c">...</span><span class="p">    </span><span class="c">mysql.connector</span>
+<span class="c">...</span><span class="p">    </span><span class="c">password=${secrets}[password]</span>
+<span class="c">...</span><span class="p">    </span><span class="c">config_file=${CURDIR}${/}azure.cfg</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.Database.Database.description">
+<span class="sig-name descname"><span class="pre">description</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#RPA.Database.Database.description" title="Permalink to this definition"></a></dt>
+<dd><p>Get description of the SQL table</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>table</strong> – name of the SQL table</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>database descripton as a list</p>
+</dd>
+</dl>
+<p>Example:</p>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="c">Connect To Database</span><span class="p">    </span><span class="c">pymysql</span><span class="p">  </span><span class="c">mydb</span><span class="p">  </span><span class="c">user</span><span class="p">  </span><span class="c">pass</span><span class="p">  </span><span class="c">127.0.0.1</span>
+<span class="c">${db_description}</span><span class="p">      </span><span class="c">Description</span><span class="p">  </span><span class="c">mytable</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.Database.Database.disconnect_from_database">
+<span class="sig-name descname"><span class="pre">disconnect_from_database</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#RPA.Database.Database.disconnect_from_database" title="Permalink to this definition"></a></dt>
+<dd><p>Close connection to SQL database</p>
+<p>Example:</p>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="c">Connect To Database</span><span class="p">    </span><span class="c">pymysql</span><span class="p">  </span><span class="c">mydb</span><span class="p">  </span><span class="c">user</span><span class="p">  </span><span class="c">pass</span><span class="p">  </span><span class="c">127.0.0.1</span>
+<span class="c">${result}</span><span class="p">              </span><span class="c">Query</span><span class="p">   </span><span class="c">Select firstname, lastname FROM table</span>
+<span class="c">Disconnect From Database</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.Database.Database.execute_sql_script">
+<span class="sig-name descname"><span class="pre">execute_sql_script</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sanstran</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoding</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'utf-8'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#RPA.Database.Database.execute_sql_script" title="Permalink to this definition"></a></dt>
+<dd><p>Execute content of SQL script as SQL commands.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> – filepath to SQL script to execute</p></li>
+<li><p><strong>sanstran</strong> – Run the query without an implicit transaction commit or
+rollback if such additional action was detected. (turned off by default)</p></li>
+<li><p><strong>encoding</strong> – character encoding of file (utf-8 by default)</p></li>
+</ul>
+</dd>
+</dl>
+<p>Example:</p>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="c">Execute SQL Script</span><span class="p">   </span><span class="c">script.sql</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.Database.Database.get_number_of_rows">
+<span class="sig-name descname"><span class="pre">get_number_of_rows</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conditions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#RPA.Database.Database.get_number_of_rows" title="Permalink to this definition"></a></dt>
+<dd><p>Get number of rows in a table. Conditions can be given
+as arguments for WHERE clause.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>table</strong> – name of the SQL table</p></li>
+<li><p><strong>conditions</strong> – restrictions for selections, defaults to None</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>number or rows</p>
+</dd>
+</dl>
+<p>Example:</p>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="c">${count}</span><span class="p">   </span><span class="c">Get Number Of Rows</span><span class="p">  </span><span class="c">tablename</span>
+<span class="c">${count}</span><span class="p">   </span><span class="c">Get Number Of Rows</span><span class="p">  </span><span class="c">tablename</span><span class="p">  </span><span class="c">column1=5 and column2=&#39;x&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.Database.Database.get_rows">
+<span class="sig-name descname"><span class="pre">get_rows</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">columns</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conditions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">as_table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Table</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#RPA.Database.Database.get_rows" title="Permalink to this definition"></a></dt>
+<dd><p>Get rows from table. Columns and conditions can be
+set to filter result.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>table</strong> – name of the SQL table</p></li>
+<li><p><strong>columns</strong> – name of columns to return, defaults to <cite>None</cite>
+means that all columns are returned</p></li>
+<li><p><strong>conditions</strong> – limiting result by WHERE clause, defaults to <cite>None</cite></p></li>
+<li><p><strong>as_table</strong> – if result should be instance of <code class="docutils literal notranslate"><span class="pre">Table</span></code>, defaults to <cite>True</cite>
+<cite>False</cite> means that return type would be <cite>list</cite></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>table or list based on param as_table arguement</p>
+</dd>
+</dl>
+<p>Example:</p>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="c">@{res}</span><span class="p">   </span><span class="c">Get Rows</span><span class="p">  </span><span class="c">tablename</span><span class="p">  </span><span class="c">arvo</span>
+<span class="c">@{res}</span><span class="p">   </span><span class="c">Get Rows</span><span class="p">  </span><span class="c">tablename</span><span class="p">  </span><span class="c">arvo</span><span class="p">  </span><span class="c">columns=id,name</span>
+<span class="c">@{res}</span><span class="p">   </span><span class="c">Get Rows</span><span class="p">  </span><span class="c">tablename</span><span class="p">  </span><span class="c">columns=id</span><span class="p">  </span><span class="c">conditions=column1=&#39;newvalue&#39;</span>
+<span class="c">@{res}</span><span class="p">   </span><span class="c">Get Rows</span><span class="p">  </span><span class="c">tablename</span><span class="p">  </span><span class="c">conditions=column2=&#39;updatedvalue&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.Database.Database.query">
+<span class="sig-name descname"><span class="pre">query</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">statement</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">assertion</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sanstran</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">as_table</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">returning</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Tuple</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Table</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#RPA.Database.Database.query" title="Permalink to this definition"></a></dt>
+<dd><p>Execute a SQL query and optionally return the execution result.</p>
+<p>Security Warning: In order to safely include untrusted data in SQL queries
+it is advisable to use parameterized queries. For more information about
+formatting for specific databases, please see <a class="reference external" href="https://bobby-tables.com/python">https://bobby-tables.com/python</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>statement</strong> – SQL statement to execute.</p></li>
+<li><p><strong>assertion</strong> – Assert on query result, row_count or columns.
+Works only for <cite>SELECT</cite> statements. (defaults to <cite>None</cite>)</p></li>
+<li><p><strong>sanstran</strong> – Run the query without an implicit transaction commit or
+rollback if such additional action was detected and this is set to <cite>True</cite>.
+(turned off by default, meaning that <em>commit</em> is performed on successful
+queries and <em>rollback</em> on failing ones automatically)</p></li>
+<li><p><strong>as_table</strong> – If the result should be an instance of <cite>Table</cite>, otherwise a
+<cite>list</cite> will be returned. (defaults to <cite>True</cite>)</p></li>
+<li><p><strong>returning</strong> – Set this to <cite>True</cite> if you want to have rows explicitly
+returned (instead of the query result), <cite>False</cite> otherwise. (by default a
+heuristic detects if it should return or not)</p></li>
+<li><p><strong>data</strong> – The data to use if the SQL statement is parameterized</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Fetched rows when <cite>returning</cite> is <cite>True</cite> or if the heuristic decides
+that the statement should return (raw rows or as <cite>Table</cite> if <cite>as_table</cite> is
+<cite>True</cite>), otherwise the object produced by the execution is returned.</p>
+</dd>
+</dl>
+<p><strong>Examples</strong></p>
+<p><strong>Robot Framework</strong></p>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="gh">*** Settings ***</span>
+<span class="kn">Library</span><span class="p">    </span><span class="nn">RPA.Database</span>
+
+<span class="gh">*** Tasks ***</span>
+<span class="gu">Select Values From Table</span>
+<span class="p">    @{</span><span class="nv">rows</span><span class="p">} =    </span><span class="nf">Query</span><span class="p">   </span><span class="s">SELECT id,value FROM table</span>
+<span class="p">    FOR  ${</span><span class="nv">row</span><span class="p">}  IN  @{</span><span class="nv">rows</span><span class="p">}</span>
+<span class="p">        </span><span class="nf">Log</span><span class="p">   ${</span><span class="nv">row</span><span class="p">}</span>
+<span class="p">    END</span>
+<span class="p">    @{</span><span class="nv">res</span><span class="p">} =    </span><span class="nf">Query</span><span class="p">   </span><span class="s">Select * FROM table</span><span class="p">   </span><span class="s">row_count &gt; </span><span class="p">${</span><span class="nv">EXPECTED</span><span class="p">}</span>
+<span class="p">    @{</span><span class="nv">res</span><span class="p">} =    </span><span class="nf">Query</span><span class="p">   </span><span class="s">Select * FROM table</span><span class="p">   </span><span class="s">&#39;value&#39; in columns</span>
+<span class="p">    @{</span><span class="nv">res</span><span class="p">} =    </span><span class="nf">Query</span><span class="p">   </span><span class="s">Select * FROM table</span><span class="p">   </span><span class="s">columns == [&#39;id&#39;, &#39;value&#39;]</span>
+<span class="p">    @{</span><span class="nv">res</span><span class="p">} =    </span><span class="nf">Query</span><span class="p">   </span><span class="s">Select * FROM table WHERE value = ?</span><span class="p">  </span><span class="s">data=(&quot;</span><span class="p">${</span><span class="nv">d</span><span class="p">}</span><span class="s">&quot;, )</span>
+<span class="p">    </span><span class="c"># Calling Stored Procedure with Query keyword requires that parameter</span>
+<span class="p">    </span><span class="c"># &#39;returning&#39; is set to &#39;True&#39;</span>
+<span class="p">    @{</span><span class="nv">res</span><span class="p">} =    </span><span class="nf">Query</span><span class="p">   </span><span class="s">Exec stored_procedure</span><span class="p">  </span><span class="s">returning=True</span>
+</pre></div>
+</div>
+<p><strong>Python</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">RPA.Database</span> <span class="kn">import</span> <span class="n">Database</span>
+
+<span class="n">lib</span> <span class="o">=</span> <span class="n">Database</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">insert_and_return_names</span><span class="p">():</span>
+    <span class="n">lib</span><span class="o">.</span><span class="n">connect_to_database</span><span class="p">(</span><span class="s2">&quot;sqlite3&quot;</span><span class="p">,</span> <span class="s2">&quot;sqlite.db&quot;</span><span class="p">)</span>
+    <span class="n">lib</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;DROP TABLE IF EXISTS orders;&quot;</span><span class="p">)</span>
+    <span class="n">lib</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;CREATE TABLE orders(id INTEGER PRIMARY KEY, name TEXT);&quot;</span><span class="p">)</span>
+    <span class="n">data1</span> <span class="o">=</span> <span class="s2">&quot;my-1st-order&quot;</span>
+    <span class="n">data2</span> <span class="o">=</span> <span class="s2">&quot;my-2nd-order&quot;</span>
+    <span class="n">lib</span><span class="o">.</span><span class="n">query</span><span class="p">(</span>
+        <span class="s1">&#39;INSERT INTO orders(id, name) VALUES(1, ?), (2, ?);&#39;</span><span class="p">,</span>
+        <span class="n">data</span><span class="o">=</span><span class="p">(</span><span class="n">data1</span><span class="p">,</span> <span class="n">data2</span><span class="p">)</span>
+    <span class="p">)</span>
+    <span class="n">rows</span> <span class="o">=</span> <span class="n">lib</span><span class="o">.</span><span class="n">query</span><span class="p">(</span>
+        <span class="s1">&#39;SELECT * FROM orders&#39;</span>
+    <span class="p">)</span>
+    <span class="nb">print</span><span class="p">([</span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">rows</span><span class="p">])</span>  <span class="c1"># [&#39;my-1st-order&#39;, &#39;my-2nd-order&#39;]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.Database.Database.set_auto_commit">
+<span class="sig-name descname"><span class="pre">set_auto_commit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">autocommit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#RPA.Database.Database.set_auto_commit" title="Permalink to this definition"></a></dt>
+<dd><p>Set database auto commit mode.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>autocommit</strong> – boolean value for auto commit, defaults to True</p>
+</dd>
+</dl>
+<p>Example:</p>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="c">Set Auto Commit</span><span class="p">             </span><span class="c"># auto commit is set on</span>
+<span class="c">Set Auto Commit</span><span class="p">   </span><span class="c">False</span><span class="p">     </span><span class="c"># auto commit is turned off</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+          </div>
+	<div id="cookieConsentContainer">
+  <div class="cookieDesc">
+    <p>
+      This website uses cookies to enhance the user experience.
+      By using the website you accept the use of cookies.
+      You can check our <a href="https://robocorp.com/privacy-policy">Privacy Policy</a> to learn more.
+    </p>
+  </div>
+  <div class="cookieButton">
+    <a onClick="cookieDismiss();">
+      I understand
+    </a>
+  </div>
+</div>
+	<div id="robocorpBanner">
+  <div id="bannerContent">
+    <div id="bannerDismiss">
+      <a onClick="bannerDismiss();">
+        <img src="/_static/icon_cross.svg"/>
+      </a>
+    </div>
+    <a href="https://robocorp.com">
+      <img id="bannerLogo" src="https://cdn.robocorp.com/brand/Logo/Negative logo transparent/Negative logo transparent.svg"/>
+    </a>
+    <span id="bannerText">
+      The automation stack for RPA Framework.
+    </span>
+    <a id="bannerButton" href="https://robocorp.com/get-started">
+      Get started <img src="/_static/icon_arrow.svg"/>
+    </a>
+  </div>
+</div>
+
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Database" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../desktop/index.html" class="btn btn-neutral float-right" title="Desktop" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023 Robocorp Technologies, Inc..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

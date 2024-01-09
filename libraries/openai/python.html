@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Python API &mdash; RPA Framework  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/iframeResizer.min.js"></script>
+        <script src="../../_static/custom.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Outlook.Application" href="../outlook_application/index.html" />
+    <link rel="prev" title="OpenAI" href="index.html" />
+	<!-- Cookie consent -->
+<link async rel="stylesheet" type="text/css" href="../../_static/cookie.css"/>
+<script async src="../../_static/cookie.js"></script>
+<!-- Robocorp banner -->
+<link async rel="stylesheet" type="text/css" href="../../_static/robocorp.css"/>
+<script async src="../../_static/robocorp.js"></script>
+<!--            -->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-151433780-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-151433780-3');
+</script>
+<!--            -->
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            RPA Framework
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Libraries</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../archive/index.html">Archive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assistant/index.html">Assistant</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../browser/index.html">Browser</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../browser_playwright/index.html">Browser.Playwright</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../browser_selenium/index.html">Browser.Selenium</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../calendar/index.html">Calendar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cloud_aws/index.html">Cloud.AWS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cloud_azure/index.html">Cloud.Azure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cloud_google/index.html">Cloud.Google</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../crypto/index.html">Crypto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../database/index.html">Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../desktop/index.html">Desktop</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../desktop_clipboard/index.html">Desktop.Clipboard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../desktop_operatingsystem/index.html">Desktop.OperatingSystem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../desktop_windows/index.html">Desktop.Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentai/index.html">DocumentAI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentai_base64ai/index.html">DocumentAI.Base64AI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentai_nanonets/index.html">DocumentAI.Nanonets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../email_exchange/index.html">Email.Exchange</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../email_imapsmtp/index.html">Email.ImapSmtp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../excel_application/index.html">Excel.Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../excel_files/index.html">Excel.Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../filesystem/index.html">FileSystem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ftp/index.html">FTP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../http/index.html">HTTP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hubspot/index.html">HubSpot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../images/index.html">Images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javaaccessbridge/index.html">JavaAccessBridge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../json/index.html">JSON</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mfa/index.html">MFA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../msgraph/index.html">MSGraph</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../netsuite/index.html">Netsuite</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notifier/index.html">Notifier</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">OpenAI</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Python API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../outlook_application/index.html">Outlook.Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pdf/index.html">PDF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../robocorp_process/index.html">Robocorp.Process</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../robocorp_storage/index.html">Robocorp.Storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../robocorp_vault/index.html">Robocorp.Vault</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../robocorp_workitems/index.html">Robocorp.WorkItems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../robotloglistener/index.html">RobotLogListener</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../salesforce/index.html">Salesforce</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sap/index.html">SAP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../slack/index.html">Slack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../smartsheet/index.html">Smartsheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tables/index.html">Tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/index.html">Tasks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../twitter/index.html">Twitter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../windows/index.html">Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../word_application/index.html">Word.Application</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Project</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../releasenotes.html">Release notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/guide.html">Contribution guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/conventions.html">Project conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/todos.html">TODO</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">RPA Framework</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">OpenAI</a></li>
+      <li class="breadcrumb-item active">Python API</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/libraries/openai/python.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+	
+           <div itemprop="articleBody">
+             
+  <div class="section" id="python-api">
+<h1>Python API<a class="headerlink" href="#python-api" title="Permalink to this heading"></a></h1>
+<div class="section" id="openai">
+<h2>OpenAI<a class="headerlink" href="#openai" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="RPA.OpenAI.OpenAI">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">RPA.OpenAI.</span></span><span class="sig-name descname"><span class="pre">OpenAI</span></span><a class="headerlink" href="#RPA.OpenAI.OpenAI" title="Permalink to this definition"></a></dt>
+<dd><p>Library to support <a class="reference external" href="https://openai.com">OpenAI</a> and <a class="reference external" href="https://learn.microsoft.com/en-us/azure/cognitive-services/openai/overview">Azure OpenAI</a> services.</p>
+<p>Library is <strong>not</strong> included in the <cite>rpaframework</cite> package, so in order to use it
+you have to add <cite>rpaframework-openai</cite> with the desired version in your
+<em>conda.yaml</em> file.</p>
+<p><strong>Robot Framework example usage</strong></p>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="gh">*** Settings ***</span>
+<span class="kn">Library</span><span class="p">    </span><span class="nn">RPA.Robocorp.Vault</span>
+<span class="kn">Library</span><span class="p">    </span><span class="nn">RPA.OpenAI</span>
+
+<span class="gh">*** Tasks ***</span>
+<span class="gu">Create a text completion</span>
+<span class="p">    ${</span><span class="nv">secrets</span><span class="p">}   </span><span class="nf">Get Secret</span><span class="p">   </span><span class="s">secret_name=OpenAI</span>
+<span class="p">    </span><span class="nf">Authorize To OpenAI</span><span class="p">   </span><span class="s">api_key=</span><span class="p">${</span><span class="nv">secrets</span><span class="p">}[</span><span class="nv">key</span><span class="p">]</span>
+<span class="p">    ${</span><span class="nv">completion</span><span class="p">}    </span><span class="nf">Completion Create</span>
+<span class="p">    ...     </span><span class="s">Write a tagline for an ice cream shop</span>
+<span class="p">    ...     </span><span class="s">temperature=0.6</span>
+<span class="p">    </span><span class="nf">Log</span><span class="p">   ${</span><span class="nv">completion</span><span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Python example usage</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">RPA.Robocorp.Vault</span> <span class="kn">import</span> <span class="n">Vault</span>
+<span class="kn">from</span> <span class="nn">RPA.OpenAI</span> <span class="kn">import</span> <span class="n">OpenAI</span>
+
+<span class="n">secrets</span> <span class="o">=</span> <span class="n">Vault</span><span class="p">()</span><span class="o">.</span><span class="n">get_secret</span><span class="p">(</span><span class="s2">&quot;OpenAI&quot;</span><span class="p">)</span>
+<span class="n">baselib</span> <span class="o">=</span> <span class="n">OpenAI</span><span class="p">()</span>
+<span class="n">baselib</span><span class="o">.</span><span class="n">authorize_to_openai</span><span class="p">(</span><span class="n">secrets</span><span class="p">[</span><span class="s2">&quot;key&quot;</span><span class="p">])</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">baselib</span><span class="o">.</span><span class="n">completion_create</span><span class="p">(</span>
+    <span class="n">Create</span> <span class="n">a</span> <span class="n">tagline</span> <span class="k">for</span> <span class="n">icecream</span> <span class="n">shop</span><span class="s1">&#39;,</span>
+    <span class="n">temperature</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="RPA.OpenAI.OpenAI.ROBOT_LIBRARY_DOC_FORMAT">
+<span class="sig-name descname"><span class="pre">ROBOT_LIBRARY_DOC_FORMAT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'REST'</span></em><a class="headerlink" href="#RPA.OpenAI.OpenAI.ROBOT_LIBRARY_DOC_FORMAT" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="RPA.OpenAI.OpenAI.ROBOT_LIBRARY_SCOPE">
+<span class="sig-name descname"><span class="pre">ROBOT_LIBRARY_SCOPE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'GLOBAL'</span></em><a class="headerlink" href="#RPA.OpenAI.OpenAI.ROBOT_LIBRARY_SCOPE" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.OpenAI.OpenAI.authorize_to_azure_openai">
+<span class="sig-name descname"><span class="pre">authorize_to_azure_openai</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">api_base</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">api_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'azure'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">api_version</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'2023-05-15'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#RPA.OpenAI.OpenAI.authorize_to_azure_openai" title="Permalink to this definition"></a></dt>
+<dd><p>Keyword for authorize to Azure OpenAI.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>api_key</strong> – Your Azure OpenAI API key</p></li>
+<li><p><strong>api_base</strong> – Your Endpoint URL. Example: <a class="reference external" href="https://docs-test-001.openai.azure.com/">https://docs-test-001.openai.azure.com/</a></p></li>
+<li><p><strong>api_type</strong> – “azure”</p></li>
+<li><p><strong>api_version</strong> – “2023-05-15”</p></li>
+</ul>
+</dd>
+</dl>
+<p>Robot Framework example:</p>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="c">${secrets}</span><span class="p">   </span><span class="c">Get Secret</span><span class="p">   </span><span class="c">secret_name=AzureOpenAI</span>
+<span class="c">Authorize To Azure Openai</span>
+<span class="c">...</span><span class="p">    </span><span class="c">api_key=${secrets}[api_key]</span>
+<span class="c">...</span><span class="p">    </span><span class="c">api_base=${secrets}[api_base]</span>
+<span class="c">...</span><span class="p">    </span><span class="c">api_type=azure</span>
+<span class="c">...</span><span class="p">    </span><span class="c">api_version=2023-05-15</span>
+</pre></div>
+</div>
+<p>Python example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">secrets</span> <span class="o">=</span> <span class="n">Vault</span><span class="p">()</span><span class="o">.</span><span class="n">get_secret</span><span class="p">(</span><span class="s2">&quot;AzureOpenAI&quot;</span><span class="p">)</span>
+<span class="n">baselib</span> <span class="o">=</span> <span class="n">OpenAI</span><span class="p">()</span>
+<span class="n">baselib</span><span class="o">.</span><span class="n">authorize_to_azure_openai</span><span class="p">(</span>
+    <span class="n">secrets</span><span class="p">[</span><span class="s2">&quot;api_key&quot;</span><span class="p">],</span>
+    <span class="n">secrets</span><span class="p">[</span><span class="s2">&quot;api_base&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;azure&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;2023-05-15&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.OpenAI.OpenAI.authorize_to_openai">
+<span class="sig-name descname"><span class="pre">authorize_to_openai</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#RPA.OpenAI.OpenAI.authorize_to_openai" title="Permalink to this definition"></a></dt>
+<dd><p>Keyword for authorize to OpenAI with your API key obtained from your account.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>api_key</strong> – Your OpenAI API key</p>
+</dd>
+</dl>
+<p>Robot Framework example:</p>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="c">${secrets}</span><span class="p">   </span><span class="c">Get Secret</span><span class="p">   </span><span class="c">secret_name=OpenAI</span>
+<span class="c">Authorize To OpenAI</span><span class="p">   </span><span class="c">api_key=${secrets}[key]</span>
+</pre></div>
+</div>
+<p>Python example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">secrets</span> <span class="o">=</span> <span class="n">Vault</span><span class="p">()</span><span class="o">.</span><span class="n">get_secret</span><span class="p">(</span><span class="s2">&quot;OpenAI&quot;</span><span class="p">)</span>
+<span class="n">baselib</span> <span class="o">=</span> <span class="n">OpenAI</span><span class="p">()</span>
+<span class="n">baselib</span><span class="o">.</span><span class="n">authorize_to_openai</span><span class="p">(</span><span class="n">secrets</span><span class="p">[</span><span class="s2">&quot;key&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.OpenAI.OpenAI.chat_completion_create">
+<span class="sig-name descname"><span class="pre">chat_completion_create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user_content</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conversation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'gpt-3.5-turbo'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">system_content</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperature</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">top_probability</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frequency_penalty</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">presence_penalty</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#RPA.OpenAI.OpenAI.chat_completion_create" title="Permalink to this definition"></a></dt>
+<dd><p>Keyword for creating ChatGPT text completions using OpenAI or Azure OpenAI.
+Keyword returns the response as a string and the message history as a list.</p>
+<p><strong>Note</strong>. When using <code class="docutils literal notranslate"><span class="pre">Azure</span> <span class="pre">OpenAI</span></code> you must provide the <code class="docutils literal notranslate"><span class="pre">deployment_name</span></code>
+as the <code class="docutils literal notranslate"><span class="pre">model</span></code> parameter instead of the model ID used with <code class="docutils literal notranslate"><span class="pre">OpenAI</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>user_content</strong> – Text submitted to ChatGPT to generate completions.</p></li>
+<li><p><strong>conversation</strong> – List containing the conversation to be continued. Leave
+empty for a new conversation.</p></li>
+<li><p><strong>model</strong> – For <code class="docutils literal notranslate"><span class="pre">OpenAI</span></code> the ID of the model to use, e.g. <code class="docutils literal notranslate"><span class="pre">gpt-4</span></code>
+or <code class="docutils literal notranslate"><span class="pre">gpt-3.5-turbo</span></code>. For <code class="docutils literal notranslate"><span class="pre">Azure</span> <span class="pre">OpenAI</span></code> the Deployment name,
+e.g. <code class="docutils literal notranslate"><span class="pre">myGPT4deployment</span></code>.</p></li>
+<li><p><strong>system_content</strong> – The system message helps set the behavior of
+the assistant.</p></li>
+<li><p><strong>temperature</strong> – What sampling temperature to use between 0 to 2. Higher
+values means the model will take more risks.</p></li>
+<li><p><strong>top_probability</strong> – An alternative to sampling with temperature, called
+nucleus sampling, where the model considers the results of the tokens with
+top_p probability mass.</p></li>
+<li><p><strong>frequency_penalty</strong> – Number between -2.0 and 2.0. Positive values penalize
+new tokens based on their existing frequency in the text so far.</p></li>
+<li><p><strong>presence_penalty</strong> – Number between -2.0 and 2.0. Positive values penalize
+new tokens based on whether they appear in the text so far.</p></li>
+</ul>
+</dd>
+</dl>
+<p>Robot Framework example:</p>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="c"># Get response without conversation history.</span>
+<span class="c">${response}</span><span class="p">   </span><span class="c">@{chatgpt_conversation}=</span><span class="p">     </span><span class="c">Chat Completion Create</span>
+<span class="c">...</span><span class="p">    </span><span class="c">user_content=What is the biggest mammal?</span>
+<span class="c">Log</span><span class="p">    </span><span class="c">${response}</span>
+
+<span class="c"># Continue the conversation by using the &quot;conversation&quot; argument.</span>
+<span class="c">${response}</span><span class="p">   </span><span class="c">@{chatgpt_conversation}=</span><span class="p">     </span><span class="c">Chat Completion Create</span>
+<span class="c">...</span><span class="p">    </span><span class="c">conversation=${chatgpt_conversation}</span>
+<span class="c">...</span><span class="p">    </span><span class="c">user_content=How old can it live?</span>
+<span class="c">Log</span><span class="p">    </span><span class="c">${response}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.OpenAI.OpenAI.completion_create">
+<span class="sig-name descname"><span class="pre">completion_create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prompt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'text-davinci-003'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperature</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.7</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_tokens</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">256</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">top_probability</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frequency_penalty</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">presence_penalty</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">result_format</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'string'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#RPA.OpenAI.OpenAI.completion_create" title="Permalink to this definition"></a></dt>
+<dd><p>Keyword for creating text completions in OpenAI and Azure OpenAI.
+Keyword returns a text string.</p>
+<p><strong>Note</strong>. When using <code class="docutils literal notranslate"><span class="pre">Azure</span> <span class="pre">OpenAI</span></code> you must provide the <code class="docutils literal notranslate"><span class="pre">deployment_name</span></code>
+as the <code class="docutils literal notranslate"><span class="pre">model</span></code> parameter instead of the model ID used with <code class="docutils literal notranslate"><span class="pre">OpenAI</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>prompt</strong> – Text submitted to OpenAI for creating natural language.</p></li>
+<li><p><strong>model</strong> – For <code class="docutils literal notranslate"><span class="pre">OpenAI</span></code> the ID of the model to use, e.g. <code class="docutils literal notranslate"><span class="pre">text-davinci-003</span></code>.
+For <code class="docutils literal notranslate"><span class="pre">Azure</span> <span class="pre">OpenAI</span></code> the Deployment name, e.g. <code class="docutils literal notranslate"><span class="pre">myDavinci3deployment</span></code>.</p></li>
+<li><p><strong>temperature</strong> – What sampling temperature to use.
+Higher values means the model will take more risks..</p></li>
+<li><p><strong>max_tokens</strong> – The maximum number of tokens to generate in the completion..</p></li>
+<li><p><strong>top_probability</strong> – Controls diversity via nucleus sampling. 0.5 means half
+of all likelihood-weighted options are considered.</p></li>
+<li><p><strong>frequency_penalty</strong> – Number between -2.0 and 2.0. Positive values penalize
+new tokens based on their existing frequency in the text so far.</p></li>
+<li><p><strong>presence_penalty</strong> – Number between -2.0 and 2.0. Positive values penalize
+new tokens based on whether they appear in the text so far.</p></li>
+<li><p><strong>result_format</strong> – Result format (string / json). Return just a string or
+the default JSON response.</p></li>
+</ul>
+</dd>
+</dl>
+<p>Robot Framework example:</p>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="c">${response}</span><span class="p">  </span><span class="c">Completion Create</span>
+<span class="c">...</span><span class="p">     </span><span class="c">Write a tagline for an icecream shop.</span>
+<span class="c">...</span><span class="p">     </span><span class="c">temperature=0.6</span>
+<span class="c">Log</span><span class="p">     </span><span class="c">${response}</span>
+</pre></div>
+</div>
+<p>Python example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">baselib</span><span class="o">.</span><span class="n">completion_create</span><span class="p">(</span>
+    <span class="s1">&#39;Create a tagline for icecream shop&#39;</span><span class="p">,</span>
+    <span class="n">temperature</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.OpenAI.OpenAI.image_create">
+<span class="sig-name descname"><span class="pre">image_create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prompt</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'512x512'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_images</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">result_format</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'list'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#RPA.OpenAI.OpenAI.image_create" title="Permalink to this definition"></a></dt>
+<dd><p>Keyword for creating one or more images using OpenAI.
+Keyword returns a list of urls for the images created.</p>
+<p><strong>Note</strong>. Keyword not supported in the <code class="docutils literal notranslate"><span class="pre">Azure</span> <span class="pre">OpenAI</span></code> service.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>prompt</strong> – A text description of the desired image(s).
+The maximum length is 1000 characters.</p></li>
+<li><p><strong>size</strong> – Size of the files to be created. 256x256, 512x512, 1024x1024</p></li>
+<li><p><strong>num_images</strong> – The number of images to generate. Must be between 1 and 10.</p></li>
+<li><p><strong>result_format</strong> – Result format (list / json).</p></li>
+</ul>
+</dd>
+</dl>
+<p>Robot Framework example:</p>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="c">${images}</span><span class="p">    </span><span class="c">Image Create</span>
+<span class="c">...</span><span class="p">   </span><span class="c">Cartoon style picture of a cute monkey skateboarding.</span>
+<span class="c">...</span><span class="p">   </span><span class="c">size=256x256</span>
+<span class="c">...</span><span class="p">   </span><span class="c">num_images=2</span>
+<span class="c">FOR</span><span class="p">    </span><span class="c">${url}</span><span class="p">    </span><span class="c">IN</span><span class="p">    </span><span class="c">@{images}</span>
+<span class="p">    </span><span class="c">Log</span><span class="p">    </span><span class="c">${url}</span>
+<span class="c">END</span>
+</pre></div>
+</div>
+<p>Python example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">images</span> <span class="o">=</span> <span class="n">baselib</span><span class="o">.</span><span class="n">image_create</span><span class="p">(</span>
+    <span class="s1">&#39;Cartoon style picture of a cute monkey skateboarding&#39;</span><span class="p">,</span>
+    <span class="n">size</span><span class="o">=</span><span class="s1">&#39;256x256&#39;</span><span class="p">,</span>
+    <span class="n">num_images</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="k">for</span> <span class="n">url</span> <span class="ow">in</span> <span class="n">images</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.OpenAI.OpenAI.image_create_variation">
+<span class="sig-name descname"><span class="pre">image_create_variation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src_image</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'512x512'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_images</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">result_format</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'list'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#RPA.OpenAI.OpenAI.image_create_variation" title="Permalink to this definition"></a></dt>
+<dd><p>Keyword for creating one or more variations of a image. Keyword
+returns a list of urls for the images created.
+Source file must be a valid PNG file, less than 4MB, and square.</p>
+<p><strong>Note</strong>. Keyword not supported in the <code class="docutils literal notranslate"><span class="pre">Azure</span> <span class="pre">OpenAI</span></code> service.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>src_image</strong> – The image to use as the basis for the variation(s).
+Must be a valid PNG file, less than 4MB, and square.</p></li>
+<li><p><strong>size</strong> – The size of the generated images.
+Must be one of 256x256, 512x512, or 1024x1024.</p></li>
+<li><p><strong>num_images</strong> – The number of images to generate. Must be between 1 and 10</p></li>
+<li><p><strong>result_format</strong> – Result format (list / json).</p></li>
+</ul>
+</dd>
+</dl>
+<p>Robot Framework example:</p>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="c">${variations}</span><span class="p">   </span><span class="c">Image Create Variation</span>
+<span class="c">...</span><span class="p">     </span><span class="c">source_image.png</span>
+<span class="c">...</span><span class="p">     </span><span class="c">size=256x256</span>
+<span class="c">...</span><span class="p">     </span><span class="c">num_images=2</span>
+<span class="c">FOR</span><span class="p">    </span><span class="c">${url}</span><span class="p">    </span><span class="c">IN</span><span class="p">    </span><span class="c">@{variations}</span>
+<span class="p">    </span><span class="c">Log</span><span class="p">    </span><span class="c">${url}</span>
+<span class="c">END</span>
+</pre></div>
+</div>
+<p>Python example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">variations</span> <span class="o">=</span> <span class="n">baselib</span><span class="o">.</span><span class="n">image_create_variation</span><span class="p">(</span>
+    <span class="s1">&#39;source_image.png&#39;</span><span class="p">,</span>
+    <span class="n">size</span><span class="o">=</span><span class="s1">&#39;256x256&#39;</span><span class="p">,</span>
+    <span class="n">num_images</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="k">for</span> <span class="n">url</span> <span class="ow">in</span> <span class="n">variations</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+          </div>
+	<div id="cookieConsentContainer">
+  <div class="cookieDesc">
+    <p>
+      This website uses cookies to enhance the user experience.
+      By using the website you accept the use of cookies.
+      You can check our <a href="https://robocorp.com/privacy-policy">Privacy Policy</a> to learn more.
+    </p>
+  </div>
+  <div class="cookieButton">
+    <a onClick="cookieDismiss();">
+      I understand
+    </a>
+  </div>
+</div>
+	<div id="robocorpBanner">
+  <div id="bannerContent">
+    <div id="bannerDismiss">
+      <a onClick="bannerDismiss();">
+        <img src="/_static/icon_cross.svg"/>
+      </a>
+    </div>
+    <a href="https://robocorp.com">
+      <img id="bannerLogo" src="https://cdn.robocorp.com/brand/Logo/Negative logo transparent/Negative logo transparent.svg"/>
+    </a>
+    <span id="bannerText">
+      The automation stack for RPA Framework.
+    </span>
+    <a id="bannerButton" href="https://robocorp.com/get-started">
+      Get started <img src="/_static/icon_arrow.svg"/>
+    </a>
+  </div>
+</div>
+
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="OpenAI" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../outlook_application/index.html" class="btn btn-neutral float-right" title="Outlook.Application" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023 Robocorp Technologies, Inc..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

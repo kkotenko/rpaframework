@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TODO &mdash; RPA Framework  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/iframeResizer.min.js"></script>
+        <script src="../_static/custom.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Project conventions" href="conventions.html" />
+	<!-- Cookie consent -->
+<link async rel="stylesheet" type="text/css" href="../_static/cookie.css"/>
+<script async src="../_static/cookie.js"></script>
+<!-- Robocorp banner -->
+<link async rel="stylesheet" type="text/css" href="../_static/robocorp.css"/>
+<script async src="../_static/robocorp.js"></script>
+<!--            -->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-151433780-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-151433780-3');
+</script>
+<!--            -->
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            RPA Framework
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Libraries</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../libraries/archive/index.html">Archive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries/assistant/index.html">Assistant</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries/browser/index.html">Browser</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries/browser_playwright/index.html">Browser.Playwright</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries/browser_selenium/index.html">Browser.Selenium</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries/calendar/index.html">Calendar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries/cloud_aws/index.html">Cloud.AWS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries/cloud_azure/index.html">Cloud.Azure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries/cloud_google/index.html">Cloud.Google</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries/crypto/index.html">Crypto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries/database/index.html">Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries/desktop/index.html">Desktop</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries/desktop_clipboard/index.html">Desktop.Clipboard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries/desktop_operatingsystem/index.html">Desktop.OperatingSystem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries/desktop_windows/index.html">Desktop.Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries/documentai/index.html">DocumentAI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries/documentai_base64ai/index.html">DocumentAI.Base64AI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries/documentai_nanonets/index.html">DocumentAI.Nanonets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries/email_exchange/index.html">Email.Exchange</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries/email_imapsmtp/index.html">Email.ImapSmtp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries/excel_application/index.html">Excel.Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries/excel_files/index.html">Excel.Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries/filesystem/index.html">FileSystem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries/ftp/index.html">FTP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries/http/index.html">HTTP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries/hubspot/index.html">HubSpot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries/images/index.html">Images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries/javaaccessbridge/index.html">JavaAccessBridge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries/json/index.html">JSON</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries/mfa/index.html">MFA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries/msgraph/index.html">MSGraph</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries/netsuite/index.html">Netsuite</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries/notifier/index.html">Notifier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries/openai/index.html">OpenAI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries/outlook_application/index.html">Outlook.Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries/pdf/index.html">PDF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries/robocorp_process/index.html">Robocorp.Process</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries/robocorp_storage/index.html">Robocorp.Storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries/robocorp_vault/index.html">Robocorp.Vault</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries/robocorp_workitems/index.html">Robocorp.WorkItems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries/robotloglistener/index.html">RobotLogListener</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries/salesforce/index.html">Salesforce</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries/sap/index.html">SAP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries/slack/index.html">Slack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries/smartsheet/index.html">Smartsheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries/tables/index.html">Tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries/tasks/index.html">Tasks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries/twitter/index.html">Twitter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries/windows/index.html">Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../libraries/word_application/index.html">Word.Application</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Project</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../releasenotes.html">Release notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide.html">Contribution guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="conventions.html">Project conventions</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">TODO</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">RPA Framework</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">TODO</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/contributing/todos.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+	
+           <div itemprop="articleBody">
+             
+  <div class="section" id="todo">
+<h1>TODO<a class="headerlink" href="#todo" title="Permalink to this heading"></a></h1>
+<div class="section" id="rpa-database">
+<h2>RPA.Database:<a class="headerlink" href="#rpa-database" title="Permalink to this heading"></a></h2>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Line</p></th>
+<th class="head"><p>Message</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>258</p></td>
+<td><p>take autocommit into use for all database modules</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rpa-desktop-windows">
+<h2>RPA.Desktop.Windows:<a class="headerlink" href="#rpa-desktop-windows" title="Permalink to this heading"></a></h2>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Line</p></th>
+<th class="head"><p>Message</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>651</p></td>
+<td><p>Handle too compled method</p></td>
+</tr>
+<tr class="row-odd"><td><p>1137</p></td>
+<td><p>return more valuable information about what should</p></td>
+</tr>
+<tr class="row-even"><td><p>1390</p></td>
+<td><p>supporting multiple search criterias at same time to identify ONE element</p></td>
+</tr>
+<tr class="row-odd"><td><p>1416</p></td>
+<td><p>supporting multiple search criterias at same time to identify ONE element</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rpa-desktop-keywords-application">
+<h2>RPA.Desktop.keywords.application:<a class="headerlink" href="#rpa-desktop-keywords-application" title="Permalink to this heading"></a></h2>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Line</p></th>
+<th class="head"><p>Message</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>114</p></td>
+<td><p>Move implementations to platform-specific adapters</p></td>
+</tr>
+<tr class="row-odd"><td><p>170</p></td>
+<td><p>Find out way to get actual default application,</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rpa-desktop-keywords-finder">
+<h2>RPA.Desktop.keywords.finder:<a class="headerlink" href="#rpa-desktop-keywords-finder" title="Permalink to this heading"></a></h2>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Line</p></th>
+<th class="head"><p>Message</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>307</p></td>
+<td><p>Add run-on-error support and maybe screenshotting matches?</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rpa-desktop-keywords-mouse">
+<h2>RPA.Desktop.keywords.mouse:<a class="headerlink" href="#rpa-desktop-keywords-mouse" title="Permalink to this heading"></a></h2>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Line</p></th>
+<th class="head"><p>Message</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>73</p></td>
+<td><p>Clamp to screen dimensions?</p></td>
+</tr>
+<tr class="row-odd"><td><p>106</p></td>
+<td><p>mypy should handle enum exhaustivity validation</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rpa-desktop-keywords-screen">
+<h2>RPA.Desktop.keywords.screen:<a class="headerlink" href="#rpa-desktop-keywords-screen" title="Permalink to this heading"></a></h2>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Line</p></th>
+<th class="head"><p>Message</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>177</p></td>
+<td><p>Draw a circle instead?</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rpa-email-exchange">
+<h2>RPA.Email.Exchange:<a class="headerlink" href="#rpa-email-exchange" title="Permalink to this heading"></a></h2>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Line</p></th>
+<th class="head"><p>Message</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>526</p></td>
+<td><p>The exchangelib does not seem to provide any straightforward way of</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rpa-email-imapsmtp">
+<h2>RPA.Email.ImapSmtp:<a class="headerlink" href="#rpa-email-imapsmtp" title="Permalink to this heading"></a></h2>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Line</p></th>
+<th class="head"><p>Message</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>958</p></td>
+<td><p>mypy should handle enum exhaustivity validation</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rpa-excel-files">
+<h2>RPA.Excel.Files:<a class="headerlink" href="#rpa-excel-files" title="Permalink to this heading"></a></h2>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Line</p></th>
+<th class="head"><p>Message</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2259</p></td>
+<td><p>target worksheet cell formatting is overwritten.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rpa-filesystem">
+<h2>RPA.FileSystem:<a class="headerlink" href="#rpa-filesystem" title="Permalink to this heading"></a></h2>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Line</p></th>
+<th class="head"><p>Message</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>573</p></td>
+<td><p>glob support</p></td>
+</tr>
+<tr class="row-odd"><td><p>611</p></td>
+<td><p>Should it remove all subdirectories too?</p></td>
+</tr>
+<tr class="row-even"><td><p>651</p></td>
+<td><p>glob support</p></td>
+</tr>
+<tr class="row-odd"><td><p>872</p></td>
+<td><p>Convert to proper date</p></td>
+</tr>
+<tr class="row-even"><td><p>882</p></td>
+<td><p>Convert to proper date</p></td>
+</tr>
+<tr class="row-odd"><td><p>891</p></td>
+<td><p>Convert to human-friendly?</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rpa-json">
+<h2>RPA.JSON:<a class="headerlink" href="#rpa-json" title="Permalink to this heading"></a></h2>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Line</p></th>
+<th class="head"><p>Message</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>229</p></td>
+<td><p>Add more logging about affected rows, at least on debug level</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rpa-javaaccessbridge">
+<h2>RPA.JavaAccessBridge:<a class="headerlink" href="#rpa-javaaccessbridge" title="Permalink to this heading"></a></h2>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Line</p></th>
+<th class="head"><p>Message</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>436</p></td>
+<td><p>add keyword for taking screenshots of elements and window</p></td>
+</tr>
+<tr class="row-odd"><td><p>437</p></td>
+<td><p>implement proper XPath syntax support</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rpa-msgraph">
+<h2>RPA.MSGraph:<a class="headerlink" href="#rpa-msgraph" title="Permalink to this heading"></a></h2>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Line</p></th>
+<th class="head"><p>Message</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>122</p></td>
+<td><p>Implement a <cite>TokenBackend</cite> that uses Robocorp vault,</p></td>
+</tr>
+<tr class="row-odd"><td><p>297</p></td>
+<td><p>Does this fail when we define a path we want?</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rpa-robocorp-process">
+<h2>RPA.Robocorp.Process:<a class="headerlink" href="#rpa-robocorp-process" title="Permalink to this heading"></a></h2>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Line</p></th>
+<th class="head"><p>Message</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>209</p></td>
+<td><p>Add support for all Process API endpoints</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rpa-smartsheet">
+<h2>RPA.Smartsheet:<a class="headerlink" href="#rpa-smartsheet" title="Permalink to this heading"></a></h2>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Line</p></th>
+<th class="head"><p>Message</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>118</p></td>
+<td><p>ADD LOGGING THROUGHOUT</p></td>
+</tr>
+<tr class="row-odd"><td><p>218</p></td>
+<td><p>consider if this properly connects the logs.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rpa-tasks">
+<h2>RPA.Tasks:<a class="headerlink" href="#rpa-tasks" title="Permalink to this heading"></a></h2>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Line</p></th>
+<th class="head"><p>Message</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>676</p></td>
+<td><p>Move all result object modifying here</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rpa-application">
+<h2>RPA.application:<a class="headerlink" href="#rpa-application" title="Permalink to this heading"></a></h2>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Line</p></th>
+<th class="head"><p>Message</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>36</p></td>
+<td><p>(cmin764; 16 Aug 2023): Create a <cite>handles_com_error</cite> decorator if we get a little</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+          </div>
+	<div id="cookieConsentContainer">
+  <div class="cookieDesc">
+    <p>
+      This website uses cookies to enhance the user experience.
+      By using the website you accept the use of cookies.
+      You can check our <a href="https://robocorp.com/privacy-policy">Privacy Policy</a> to learn more.
+    </p>
+  </div>
+  <div class="cookieButton">
+    <a onClick="cookieDismiss();">
+      I understand
+    </a>
+  </div>
+</div>
+	<div id="robocorpBanner">
+  <div id="bannerContent">
+    <div id="bannerDismiss">
+      <a onClick="bannerDismiss();">
+        <img src="/_static/icon_cross.svg"/>
+      </a>
+    </div>
+    <a href="https://robocorp.com">
+      <img id="bannerLogo" src="https://cdn.robocorp.com/brand/Logo/Negative logo transparent/Negative logo transparent.svg"/>
+    </a>
+    <span id="bannerText">
+      The automation stack for RPA Framework.
+    </span>
+    <a id="bannerButton" href="https://robocorp.com/get-started">
+      Get started <img src="/_static/icon_arrow.svg"/>
+    </a>
+  </div>
+</div>
+
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="conventions.html" class="btn btn-neutral float-left" title="Project conventions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023 Robocorp Technologies, Inc..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

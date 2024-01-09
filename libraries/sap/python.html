@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Python API &mdash; RPA Framework  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/iframeResizer.min.js"></script>
+        <script src="../../_static/custom.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Slack" href="../slack/index.html" />
+    <link rel="prev" title="SAP" href="index.html" />
+	<!-- Cookie consent -->
+<link async rel="stylesheet" type="text/css" href="../../_static/cookie.css"/>
+<script async src="../../_static/cookie.js"></script>
+<!-- Robocorp banner -->
+<link async rel="stylesheet" type="text/css" href="../../_static/robocorp.css"/>
+<script async src="../../_static/robocorp.js"></script>
+<!--            -->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-151433780-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-151433780-3');
+</script>
+<!--            -->
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            RPA Framework
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Libraries</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../archive/index.html">Archive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assistant/index.html">Assistant</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../browser/index.html">Browser</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../browser_playwright/index.html">Browser.Playwright</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../browser_selenium/index.html">Browser.Selenium</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../calendar/index.html">Calendar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cloud_aws/index.html">Cloud.AWS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cloud_azure/index.html">Cloud.Azure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cloud_google/index.html">Cloud.Google</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../crypto/index.html">Crypto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../database/index.html">Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../desktop/index.html">Desktop</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../desktop_clipboard/index.html">Desktop.Clipboard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../desktop_operatingsystem/index.html">Desktop.OperatingSystem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../desktop_windows/index.html">Desktop.Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentai/index.html">DocumentAI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentai_base64ai/index.html">DocumentAI.Base64AI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentai_nanonets/index.html">DocumentAI.Nanonets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../email_exchange/index.html">Email.Exchange</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../email_imapsmtp/index.html">Email.ImapSmtp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../excel_application/index.html">Excel.Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../excel_files/index.html">Excel.Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../filesystem/index.html">FileSystem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ftp/index.html">FTP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../http/index.html">HTTP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hubspot/index.html">HubSpot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../images/index.html">Images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javaaccessbridge/index.html">JavaAccessBridge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../json/index.html">JSON</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mfa/index.html">MFA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../msgraph/index.html">MSGraph</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../netsuite/index.html">Netsuite</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notifier/index.html">Notifier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openai/index.html">OpenAI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../outlook_application/index.html">Outlook.Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pdf/index.html">PDF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../robocorp_process/index.html">Robocorp.Process</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../robocorp_storage/index.html">Robocorp.Storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../robocorp_vault/index.html">Robocorp.Vault</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../robocorp_workitems/index.html">Robocorp.WorkItems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../robotloglistener/index.html">RobotLogListener</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../salesforce/index.html">Salesforce</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">SAP</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Python API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../slack/index.html">Slack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../smartsheet/index.html">Smartsheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tables/index.html">Tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/index.html">Tasks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../twitter/index.html">Twitter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../windows/index.html">Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../word_application/index.html">Word.Application</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Project</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../releasenotes.html">Release notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/guide.html">Contribution guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/conventions.html">Project conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/todos.html">TODO</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">RPA Framework</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">SAP</a></li>
+      <li class="breadcrumb-item active">Python API</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/libraries/sap/python.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+	
+           <div itemprop="articleBody">
+             
+  <div class="section" id="python-api">
+<h1>Python API<a class="headerlink" href="#python-api" title="Permalink to this heading"></a></h1>
+<div class="section" id="sap">
+<h2>SAP<a class="headerlink" href="#sap" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="RPA.SAP.SAP">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">RPA.SAP.</span></span><span class="sig-name descname"><span class="pre">SAP</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.SAP.SAP" title="Permalink to this definition"></a></dt>
+<dd><p>This library wraps the upstream [<a class="reference external" href="https://frankvanderkuur.github.io/SapGuiLibrary">https://frankvanderkuur.github.io/SapGuiLibrary</a>.html|SapGuiLibrary].</p>
+<p>The SapGuiLibrary is a library that enables users to create tests for the Sap Gui application</p>
+<blockquote>
+<div><p>The library uses the Sap Scripting Engine, therefore Scripting must be enabled in Sap in order for this library to work.</p>
+<p>= Opening a connection / Before running tests =</p>
+<p>First of all, you have to <em>make sure the Sap Logon Pad is started</em>. You can automate this process by using the
+AutoIT library or the Process Library.</p>
+<p>After the Sap Login Pad is started, you can connect to the Sap Session using the keyword <cite>connect to session</cite>.</p>
+<p>If you have a successful connection you can use <cite>Open Connection</cite> to open a new connection from the Sap Logon Pad
+or <cite>Connect To Existing Connection</cite> to connect to a connection that is already open.</p>
+<p>= Locating or specifying elements =</p>
+<p>You need to specify elements starting from the window ID, for example, wnd[0]/tbar[1]/btn[8]. In some cases the SAP
+ID contains backslashes. Make sure you escape these backslashes by adding another backslash in front of it.</p>
+<p>= Screenshots (on error) =</p>
+<p>The SapGUILibrary offers an option for automatic screenshots on error.
+Default this option is enabled, use keyword <cite>disable screenshots on error</cite> to skip the screenshot functionality.
+Alternatively, this option can be set at import.</p>
+</div></blockquote>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="RPA.SAP.SAP.ROBOT_LIBRARY_SCOPE">
+<span class="sig-name descname"><span class="pre">ROBOT_LIBRARY_SCOPE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'GLOBAL'</span></em><a class="headerlink" href="#RPA.SAP.SAP.ROBOT_LIBRARY_SCOPE" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.SAP.SAP.click_element">
+<span class="sig-name descname"><span class="pre">click_element</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.SAP.SAP.click_element" title="Permalink to this definition"></a></dt>
+<dd><p>Performs a single click on a given element. Used only for buttons, tabs and menu items.</p>
+<p>In case you want to change a value of an element like checkboxes of selecting an option in dropdown lists,
+use <cite>select checkbox</cite> or <cite>select from list by label</cite> instead.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.SAP.SAP.click_toolbar_button">
+<span class="sig-name descname"><span class="pre">click_toolbar_button</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">button_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.SAP.SAP.click_toolbar_button" title="Permalink to this definition"></a></dt>
+<dd><p>Clicks a button of a toolbar within a GridView ‘table_id’ which is contained within a shell object.
+Use the Scripting tracker recorder to find the ‘button_id’ of the button to click</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.SAP.SAP.connect_to_existing_connection">
+<span class="sig-name descname"><span class="pre">connect_to_existing_connection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">connection_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.SAP.SAP.connect_to_existing_connection" title="Permalink to this definition"></a></dt>
+<dd><p>Connects to an open connection. If the connection matches the given connection_name, the session is connected
+to this connection.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.SAP.SAP.connect_to_session">
+<span class="sig-name descname"><span class="pre">connect_to_session</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">explicit_wait</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.SAP.SAP.connect_to_session" title="Permalink to this definition"></a></dt>
+<dd><p>Connects to an open session SAP.</p>
+<p>See <cite>Opening a connection / Before running tests</cite> for details about requirements before connecting to a session.</p>
+<p>Optionally <cite>set explicit wait</cite> can be used to set the explicit wait time.</p>
+<p><em>Examples</em>:
+| <em>Keyword</em>             | <em>Attributes</em>          |
+| connect to session    |                       |
+| connect to session    | 3                     |
+| connect to session    | explicit_wait=500ms   |</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.SAP.SAP.disable_screenshots_on_error">
+<span class="sig-name descname"><span class="pre">disable_screenshots_on_error</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RPA.SAP.SAP.disable_screenshots_on_error" title="Permalink to this definition"></a></dt>
+<dd><p>Disables automatic screenshots on error.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.SAP.SAP.doubleclick_element">
+<span class="sig-name descname"><span class="pre">doubleclick_element</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">item_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">column_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.SAP.SAP.doubleclick_element" title="Permalink to this definition"></a></dt>
+<dd><p>Performs a double-click on a given element. Used only for shell objects.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.SAP.SAP.element_should_be_present">
+<span class="sig-name descname"><span class="pre">element_should_be_present</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.SAP.SAP.element_should_be_present" title="Permalink to this definition"></a></dt>
+<dd><p>Checks whether an element is present on the screen.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.SAP.SAP.element_value_should_be">
+<span class="sig-name descname"><span class="pre">element_value_should_be</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expected_value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.SAP.SAP.element_value_should_be" title="Permalink to this definition"></a></dt>
+<dd><p>Checks whether the element value is the same as the expected value.
+The possible expected values depend on the type of element (see usage).</p>
+<blockquote>
+<div><p>Usage:
+| <em>Element type</em>   | <em>possible values</em>                 |
+| textfield        | text                              |
+| label            | text                              |
+| checkbox         | checked / unchecked               |
+| radiobutton      | checked / unchecked               |
+| combobox         | text of the option to be expected |</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.SAP.SAP.element_value_should_contain">
+<span class="sig-name descname"><span class="pre">element_value_should_contain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expected_value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.SAP.SAP.element_value_should_contain" title="Permalink to this definition"></a></dt>
+<dd><p>Checks whether the element value contains the expected value.
+The possible expected values depend on the type of element (see usage).</p>
+<blockquote>
+<div><p>Usage:
+| <em>Element type</em>   | <em>possible values</em>                 |
+| textfield        | text                              |
+| label            | text                              |
+| combobox         | text of the option to be expected |</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.SAP.SAP.enable_screenshots_on_error">
+<span class="sig-name descname"><span class="pre">enable_screenshots_on_error</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RPA.SAP.SAP.enable_screenshots_on_error" title="Permalink to this definition"></a></dt>
+<dd><p>Enables automatic screenshots on error.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.SAP.SAP.focus_and_click">
+<span class="sig-name descname"><span class="pre">focus_and_click</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.SAP.SAP.focus_and_click" title="Permalink to this definition"></a></dt>
+<dd><p>Set focus into the element and click it.</p>
+<p>Note. The default library wait time can be adjusted using <cite>Set Explicit Wait</cite>
+keyword. Library’s <cite>explicit_wait</cite> will be used if <cite>wait_time</cite> parameter
+is not set.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>element_id</strong> – locator for the element</p></li>
+<li><p><strong>wait_time</strong> – the wait time after the action</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.SAP.SAP.focus_and_input_text">
+<span class="sig-name descname"><span class="pre">focus_and_input_text</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.SAP.SAP.focus_and_input_text" title="Permalink to this definition"></a></dt>
+<dd><p>Set focus into the element and input text into it.</p>
+<p>Note. The default library wait time can be adjusted using <cite>Set Explicit Wait</cite>
+keyword. Library’s <cite>explicit_wait</cite> will be used if <cite>wait_time</cite> parameter
+is not set.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>element_id</strong> – locator for the element</p></li>
+<li><p><strong>text</strong> – text to be inputted</p></li>
+<li><p><strong>wait_time</strong> – the wait time after the action</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.SAP.SAP.generic_click_element">
+<span class="sig-name descname"><span class="pre">generic_click_element</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">click_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'press'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.SAP.SAP.generic_click_element" title="Permalink to this definition"></a></dt>
+<dd><p>Performs a single click on a given element.</p>
+<p>Differs from <cite>Click Element</cite> keyword so that element type is ignored, instead
+<cite>click_type</cite> (either <cite>press</cite> or <cite>select</cite>) is performed on the element if
+possible.</p>
+<p>In case you want to change a value of an element like checkboxes of selecting
+an option in dropdown lists, use <cite>select checkbox</cite> or
+<cite>select from list by label</cite> instead.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>element_id</strong> – locator for the element</p></li>
+<li><p><strong>click_type</strong> – either <code class="docutils literal notranslate"><span class="pre">press</span></code> (default) or <code class="docutils literal notranslate"><span class="pre">select</span></code></p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.SAP.SAP.generic_input_password">
+<span class="sig-name descname"><span class="pre">generic_input_password</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.SAP.SAP.generic_input_password" title="Permalink to this definition"></a></dt>
+<dd><p>Inserts the given password into the text field identified by locator.</p>
+<p>This keyword does NOT depend on the type of the element. Will set
+password to the element’s ‘text’ attribute if possible.</p>
+<p>The password is not recorded in the log.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>element_id</strong> – locator for the element</p></li>
+<li><p><strong>password</strong> – password to be inputted</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.SAP.SAP.generic_input_text">
+<span class="sig-name descname"><span class="pre">generic_input_text</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.SAP.SAP.generic_input_text" title="Permalink to this definition"></a></dt>
+<dd><p>Inserts the given text into the text field identified by locator.
+Use keyword <cite>input password</cite> to insert a password in a text field.</p>
+<p>This keyword does NOT depend on the type of the element. Will set
+text to the element’s ‘text’ attribute if possible.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>element_id</strong> – locator for the element</p></li>
+<li><p><strong>text</strong> – text to be inputted</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.SAP.SAP.get_cell_value">
+<span class="sig-name descname"><span class="pre">get_cell_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">row_num</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">col_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.SAP.SAP.get_cell_value" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the cell value for the specified cell.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>table_id</strong> – locator for the table element</p></li>
+<li><p><strong>row_num</strong> – table row number</p></li>
+<li><p><strong>col_id</strong> – table cell id</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>text in the specified cell</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.SAP.SAP.get_element_location">
+<span class="sig-name descname"><span class="pre">get_element_location</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.SAP.SAP.get_element_location" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the Sap element location for the given element.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.SAP.SAP.get_element_type">
+<span class="sig-name descname"><span class="pre">get_element_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.SAP.SAP.get_element_type" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the Sap element type for the given element.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.SAP.SAP.get_element_type_of_object">
+<span class="sig-name descname"><span class="pre">get_element_type_of_object</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.SAP.SAP.get_element_type_of_object" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the Sap element type for the given element.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>element</strong> – SAP element</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>type of the SAP element</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.SAP.SAP.get_row_count">
+<span class="sig-name descname"><span class="pre">get_row_count</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.SAP.SAP.get_row_count" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the number of rows found in the specified table.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.SAP.SAP.get_scroll_position">
+<span class="sig-name descname"><span class="pre">get_scroll_position</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.SAP.SAP.get_scroll_position" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the scroll position of the scrollbar of an element ‘element_id’ that is contained within a shell object.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.SAP.SAP.get_statusbar_type">
+<span class="sig-name descname"><span class="pre">get_statusbar_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">window</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'wnd[0]'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#RPA.SAP.SAP.get_statusbar_type" title="Permalink to this definition"></a></dt>
+<dd><p>Retrieves the messageType in the statusbar the given window.</p>
+<p>Takes screenshot on error.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>window</strong> – locator for the statusbar, default ‘wnd[0]’</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>messageType of the /sbar element or empty string</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.SAP.SAP.get_value">
+<span class="sig-name descname"><span class="pre">get_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.SAP.SAP.get_value" title="Permalink to this definition"></a></dt>
+<dd><p>Gets the value of the given element. The possible return values depend on the type of element (see Return values).</p>
+<p>Return values:
+| <em>Element type</em>   | <em>Return values</em>                   |
+| textfield        | text                              |
+| label            | text                              |
+| checkbox         | checked / unchecked               |
+| radiobutton      | checked / unchecked               |
+| combobox         | text of the selected option       |
+| guibutton        | text                              |
+| guititlebar      | text                              |
+| guistatusbar     | text                              |
+| guitab           | text                              |</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.SAP.SAP.get_window_title">
+<span class="sig-name descname"><span class="pre">get_window_title</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">locator</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.SAP.SAP.get_window_title" title="Permalink to this definition"></a></dt>
+<dd><p>Retrieves the window title of the given window.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.SAP.SAP.input_password">
+<span class="sig-name descname"><span class="pre">input_password</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.SAP.SAP.input_password" title="Permalink to this definition"></a></dt>
+<dd><p>Inserts the given password into the text field identified by locator.
+The password is not recorded in the log.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.SAP.SAP.input_text">
+<span class="sig-name descname"><span class="pre">input_text</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.SAP.SAP.input_text" title="Permalink to this definition"></a></dt>
+<dd><p>Inserts the given text into the text field identified by locator.
+Use keyword <cite>input password</cite> to insert a password in a text field.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.SAP.SAP.maximize_window">
+<span class="sig-name descname"><span class="pre">maximize_window</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">window</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.SAP.SAP.maximize_window" title="Permalink to this definition"></a></dt>
+<dd><p>Maximizes the SapGui window.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.SAP.SAP.open_connection">
+<span class="sig-name descname"><span class="pre">open_connection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">connection_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.SAP.SAP.open_connection" title="Permalink to this definition"></a></dt>
+<dd><p>Opens a connection to the given connection name. Be sure to provide the full connection name, including the bracket part.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.SAP.SAP.press_f1">
+<span class="sig-name descname"><span class="pre">press_f1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.SAP.SAP.press_f1" title="Permalink to this definition"></a></dt>
+<dd><p>Calls the PressF1 function on the passed element id.
+The element can be a textfield or a GridView inside a shell.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>element_id</strong> – id of the SAP element</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.SAP.SAP.press_f4">
+<span class="sig-name descname"><span class="pre">press_f4</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.SAP.SAP.press_f4" title="Permalink to this definition"></a></dt>
+<dd><p>Calls the PressF4 function on the passed element id.
+The element can be a textfield or a GridView inside a shell.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>element_id</strong> – id of the SAP element</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.SAP.SAP.run_transaction">
+<span class="sig-name descname"><span class="pre">run_transaction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">transaction</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.SAP.SAP.run_transaction" title="Permalink to this definition"></a></dt>
+<dd><p>Runs a Sap transaction. An error is given when an unknown transaction is specified.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.SAP.SAP.scroll">
+<span class="sig-name descname"><span class="pre">scroll</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">position</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.SAP.SAP.scroll" title="Permalink to this definition"></a></dt>
+<dd><p>Scrolls the scrollbar of an element ‘element_id’ that is contained within a shell object.
+‘Position’ is the number of rows to scroll.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.SAP.SAP.select_checkbox">
+<span class="sig-name descname"><span class="pre">select_checkbox</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.SAP.SAP.select_checkbox" title="Permalink to this definition"></a></dt>
+<dd><p>Selects checkbox identified by locator.
+Does nothing if the checkbox is already selected.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.SAP.SAP.select_context_menu_item">
+<span class="sig-name descname"><span class="pre">select_context_menu_item</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">menu_or_button_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">item_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.SAP.SAP.select_context_menu_item" title="Permalink to this definition"></a></dt>
+<dd><p>Selects an item from the context menu by clicking a button or right-clicking in the node context menu.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.SAP.SAP.select_from_list_by_label">
+<span class="sig-name descname"><span class="pre">select_from_list_by_label</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.SAP.SAP.select_from_list_by_label" title="Permalink to this definition"></a></dt>
+<dd><p>Selects the specified option from the selection list.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.SAP.SAP.select_node">
+<span class="sig-name descname"><span class="pre">select_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tree_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expand</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.SAP.SAP.select_node" title="Permalink to this definition"></a></dt>
+<dd><p>Selects a node of a TableTreeControl ‘tree_id’ which is contained within a shell object.</p>
+<p>Use the Scripting tracker recorder to find the ‘node_id’ of the node.
+Expand can be set to True to expand the node. If the node cannot be expanded, no error is given.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.SAP.SAP.select_node_link">
+<span class="sig-name descname"><span class="pre">select_node_link</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tree_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">link_id1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">link_id2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.SAP.SAP.select_node_link" title="Permalink to this definition"></a></dt>
+<dd><p>Selects a link of a TableTreeControl ‘tree_id’ which is contained within a shell object.</p>
+<p>Use the Scripting tracker recorder to find the ‘link_id1’ and ‘link_id2’ of the link to select.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.SAP.SAP.select_radio_button">
+<span class="sig-name descname"><span class="pre">select_radio_button</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.SAP.SAP.select_radio_button" title="Permalink to this definition"></a></dt>
+<dd><p>Sets radio button to the specified value.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.SAP.SAP.select_table_column">
+<span class="sig-name descname"><span class="pre">select_table_column</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">column_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.SAP.SAP.select_table_column" title="Permalink to this definition"></a></dt>
+<dd><p>Selects an entire column of a GridView ‘table_id’ which is contained within a shell object.</p>
+<p>Use the Scripting tracker recorder to find the ‘column_id’ of the column to select.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.SAP.SAP.select_table_row">
+<span class="sig-name descname"><span class="pre">select_table_row</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">row_num</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.SAP.SAP.select_table_row" title="Permalink to this definition"></a></dt>
+<dd><p>Selects an entire row of a table. This can either be a TableControl or a GridView ‘table_id’
+which is contained within a shell object. The row is an index to select the row, starting from 0.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.SAP.SAP.send_vkey">
+<span class="sig-name descname"><span class="pre">send_vkey</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vkey_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">window</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.SAP.SAP.send_vkey" title="Permalink to this definition"></a></dt>
+<dd><p>Sends a SAP virtual key combination to the window, not into an element.
+If you want to send a value to a text field, use <cite>input text</cite> instead.</p>
+<p>To send a vkey, you can either use te <em>VKey ID</em> or the <em>Key combination</em>.</p>
+<p>Sap Virtual Keys (on Windows)
+| <em>VKey ID</em> | <em>Key combination</em>     | <em>VKey ID</em> | <em>Key combination</em>     | <em>VKey ID</em> | <em>Key combination</em>     |
+| <em>0</em>       | Enter                 | <em>26</em>      | Ctrl + F2             | <em>72</em>      | Ctrl + A              |
+| <em>1</em>       | F1                    | <em>27</em>      | Ctrl + F3             | <em>73</em>      | Ctrl + D              |
+| <em>2</em>       | F2                    | <em>28</em>      | Ctrl + F4             | <em>74</em>      | Ctrl + N              |
+| <em>3</em>       | F3                    | <em>29</em>      | Ctrl + F5             | <em>75</em>      | Ctrl + O              |
+| <em>4</em>       | F4                    | <em>30</em>      | Ctrl + F6             | <em>76</em>      | Shift + Del           |
+| <em>5</em>       | F5                    | <em>31</em>      | Ctrl + F7             | <em>77</em>      | Ctrl + Ins            |
+| <em>6</em>       | F6                    | <em>32</em>      | Ctrl + F8             | <em>78</em>      | Shift + Ins           |
+| <em>7</em>       | F7                    | <em>33</em>      | Ctrl + F9             | <em>79</em>      | Alt + Backspace       |
+| <em>8</em>       | F8                    | <em>34</em>      | Ctrl + F10            | <em>80</em>      | Ctrl + Page Up        |
+| <em>9</em>       | F9                    | <em>35</em>      | Ctrl + F11            | <em>81</em>      | Page Up               |
+| <em>10</em>      | F10                   | <em>36</em>      | Ctrl + F12            | <em>82</em>      | Page Down             |
+| <em>11</em>      | F11 or Ctrl + S       | <em>37</em>      | Ctrl + Shift + F1     | <em>83</em>      | Ctrl + Page Down      |
+| <em>12</em>      | F12 or ESC            | <em>38</em>      | Ctrl + Shift + F2     | <em>84</em>      | Ctrl + G              |
+| <em>14</em>      | Shift + F2            | <em>39</em>      | Ctrl + Shift + F3     | <em>85</em>      | Ctrl + R              |
+| <em>15</em>      | Shift + F3            | <em>40</em>      | Ctrl + Shift + F4     | <em>86</em>      | Ctrl + P              |
+| <em>16</em>      | Shift + F4            | <em>41</em>      | Ctrl + Shift + F5     | <em>87</em>      | Ctrl + B              |
+| <em>17</em>      | Shift + F5            | <em>42</em>      | Ctrl + Shift + F6     | <em>88</em>      | Ctrl + K              |
+| <em>18</em>      | Shift + F6            | <em>43</em>      | Ctrl + Shift + F7     | <em>89</em>      | Ctrl + T              |
+| <em>19</em>      | Shift + F7            | <em>44</em>      | Ctrl + Shift + F8     | <em>90</em>      | Ctrl + Y              |
+| <em>20</em>      | Shift + F8            | <em>45</em>      | Ctrl + Shift + F9     | <em>91</em>      | Ctrl + X              |
+| <em>21</em>      | Shift + F9            | <em>46</em>      | Ctrl + Shift + F10    | <em>92</em>      | Ctrl + C              |
+| <em>22</em>      | Ctrl + Shift + 0      | <em>47</em>      | Ctrl + Shift + F11    | <em>93</em>      | Ctrl + V              |
+| <em>23</em>      | Shift + F11           | <em>48</em>      | Ctrl + Shift + F12    | <em>94</em>      | Shift + F10           |
+| <em>24</em>      | Shift + F12           | <em>70</em>      | Ctrl + E              | <em>97</em>      | Ctrl + #              |
+| <em>25</em>      | Ctrl + F1             | <em>71</em>      | Ctrl + F              |           |                       |</p>
+<p>Examples:
+| <em>Keyword</em>     | <em>Attributes</em>      |           |
+| send_vkey     | 8                 |           |
+| send_vkey     | Ctrl + Shift + F1 |           |
+| send_vkey     | Ctrl + F7         | window=1  |</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.SAP.SAP.set_cell_value">
+<span class="sig-name descname"><span class="pre">set_cell_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">row_num</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">col_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.SAP.SAP.set_cell_value" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the cell value for the specified cell of a GridView ‘table_id’ which is contained within a shell object.</p>
+<p>Use the Scripting tracker recorder to find the ‘col_id’ of the cell to set.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.SAP.SAP.set_explicit_wait">
+<span class="sig-name descname"><span class="pre">set_explicit_wait</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">speed</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.SAP.SAP.set_explicit_wait" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the delay time that is waited after each SapGui keyword.</p>
+<p>The value can be given as a number that is considered to be seconds or as a human-readable string like 1 second
+or 700 ms.</p>
+<p>This functionality is designed to be used for demonstration and debugging purposes. It is not advised to use
+this keyword to wait for an element to appear or function to finish.</p>
+<blockquote>
+<div><p><em>Possible time formats:</em></p>
+</div></blockquote>
+<div class="line-block">
+<div class="line">miliseconds       | milliseconds, millisecond, millis, ms |</div>
+<div class="line">seconds           | seconds, second, secs, sec, s         |</div>
+<div class="line">minutes           | minutes, minute, mins, min, m         |</div>
+</div>
+<blockquote>
+<div><p><em>Example:</em></p>
+</div></blockquote>
+<div class="line-block">
+<div class="line"><em>Keyword</em>         | <em>Attributes</em>      |</div>
+<div class="line">Set explicit wait | 1                 |</div>
+<div class="line">Set explicit wait | 3 seconds         |</div>
+<div class="line">Set explicit wait | 500 ms            |</div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.SAP.SAP.set_focus">
+<span class="sig-name descname"><span class="pre">set_focus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.SAP.SAP.set_focus" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the focus to the given element.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.SAP.SAP.take_screenshot">
+<span class="sig-name descname"><span class="pre">take_screenshot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">screenshot_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'sap-screenshot'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.SAP.SAP.take_screenshot" title="Permalink to this definition"></a></dt>
+<dd><p>Takes a screenshot, only if ‘screenshots on error’ has been enabled,
+either at import of with keyword <cite>enable screenshots on error</cite>.</p>
+<p>This keyword uses Robots’ internal <cite>Screenshot</cite> library.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.SAP.SAP.unselect_checkbox">
+<span class="sig-name descname"><span class="pre">unselect_checkbox</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.SAP.SAP.unselect_checkbox" title="Permalink to this definition"></a></dt>
+<dd><p>Removes selection of checkbox identified by locator.
+Does nothing if the checkbox is not selected.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+          </div>
+	<div id="cookieConsentContainer">
+  <div class="cookieDesc">
+    <p>
+      This website uses cookies to enhance the user experience.
+      By using the website you accept the use of cookies.
+      You can check our <a href="https://robocorp.com/privacy-policy">Privacy Policy</a> to learn more.
+    </p>
+  </div>
+  <div class="cookieButton">
+    <a onClick="cookieDismiss();">
+      I understand
+    </a>
+  </div>
+</div>
+	<div id="robocorpBanner">
+  <div id="bannerContent">
+    <div id="bannerDismiss">
+      <a onClick="bannerDismiss();">
+        <img src="/_static/icon_cross.svg"/>
+      </a>
+    </div>
+    <a href="https://robocorp.com">
+      <img id="bannerLogo" src="https://cdn.robocorp.com/brand/Logo/Negative logo transparent/Negative logo transparent.svg"/>
+    </a>
+    <span id="bannerText">
+      The automation stack for RPA Framework.
+    </span>
+    <a id="bannerButton" href="https://robocorp.com/get-started">
+      Get started <img src="/_static/icon_arrow.svg"/>
+    </a>
+  </div>
+</div>
+
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="SAP" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../slack/index.html" class="btn btn-neutral float-right" title="Slack" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023 Robocorp Technologies, Inc..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

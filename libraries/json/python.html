@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Python API &mdash; RPA Framework  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/iframeResizer.min.js"></script>
+        <script src="../../_static/custom.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="MFA" href="../mfa/index.html" />
+    <link rel="prev" title="JSON" href="index.html" />
+	<!-- Cookie consent -->
+<link async rel="stylesheet" type="text/css" href="../../_static/cookie.css"/>
+<script async src="../../_static/cookie.js"></script>
+<!-- Robocorp banner -->
+<link async rel="stylesheet" type="text/css" href="../../_static/robocorp.css"/>
+<script async src="../../_static/robocorp.js"></script>
+<!--            -->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-151433780-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-151433780-3');
+</script>
+<!--            -->
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            RPA Framework
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Libraries</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../archive/index.html">Archive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assistant/index.html">Assistant</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../browser/index.html">Browser</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../browser_playwright/index.html">Browser.Playwright</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../browser_selenium/index.html">Browser.Selenium</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../calendar/index.html">Calendar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cloud_aws/index.html">Cloud.AWS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cloud_azure/index.html">Cloud.Azure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cloud_google/index.html">Cloud.Google</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../crypto/index.html">Crypto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../database/index.html">Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../desktop/index.html">Desktop</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../desktop_clipboard/index.html">Desktop.Clipboard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../desktop_operatingsystem/index.html">Desktop.OperatingSystem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../desktop_windows/index.html">Desktop.Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentai/index.html">DocumentAI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentai_base64ai/index.html">DocumentAI.Base64AI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentai_nanonets/index.html">DocumentAI.Nanonets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../email_exchange/index.html">Email.Exchange</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../email_imapsmtp/index.html">Email.ImapSmtp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../excel_application/index.html">Excel.Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../excel_files/index.html">Excel.Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../filesystem/index.html">FileSystem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ftp/index.html">FTP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../http/index.html">HTTP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hubspot/index.html">HubSpot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../images/index.html">Images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javaaccessbridge/index.html">JavaAccessBridge</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">JSON</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Python API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../mfa/index.html">MFA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../msgraph/index.html">MSGraph</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../netsuite/index.html">Netsuite</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notifier/index.html">Notifier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openai/index.html">OpenAI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../outlook_application/index.html">Outlook.Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pdf/index.html">PDF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../robocorp_process/index.html">Robocorp.Process</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../robocorp_storage/index.html">Robocorp.Storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../robocorp_vault/index.html">Robocorp.Vault</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../robocorp_workitems/index.html">Robocorp.WorkItems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../robotloglistener/index.html">RobotLogListener</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../salesforce/index.html">Salesforce</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sap/index.html">SAP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../slack/index.html">Slack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../smartsheet/index.html">Smartsheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tables/index.html">Tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/index.html">Tasks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../twitter/index.html">Twitter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../windows/index.html">Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../word_application/index.html">Word.Application</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Project</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../releasenotes.html">Release notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/guide.html">Contribution guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/conventions.html">Project conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/todos.html">TODO</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">RPA Framework</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">JSON</a></li>
+      <li class="breadcrumb-item active">Python API</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/libraries/json/python.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+	
+           <div itemprop="articleBody">
+             
+  <div class="section" id="python-api">
+<h1>Python API<a class="headerlink" href="#python-api" title="Permalink to this heading"></a></h1>
+<div class="section" id="json">
+<h2>JSON<a class="headerlink" href="#json" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="RPA.JSON.JSON">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">RPA.JSON.</span></span><span class="sig-name descname"><span class="pre">JSON</span></span><a class="headerlink" href="#RPA.JSON.JSON" title="Permalink to this definition"></a></dt>
+<dd><p><cite>JSON</cite> is a library for manipulating <a class="reference external" href="http://json.org/">JSON</a> files and strings.</p>
+<p>JSON is a common data interchange format inspired by a subset of
+the Javascript programming language, but these days is a de facto
+standard in modern web APIs and is language agnostic.</p>
+<div class="section" id="serialization">
+<h3>Serialization<a class="headerlink" href="#serialization" title="Permalink to this heading"></a></h3>
+<p>The term <cite>serialization</cite> refers to the process of converting
+Robot Framework or Python types to JSON or the other way around.</p>
+<p>Basic types can be easily converted between the domains,
+and the mapping is as follows:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 65%" />
+<col style="width: 35%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>JSON</p></th>
+<th class="head"><p>Python</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>object</p></td>
+<td><p>dict</p></td>
+</tr>
+<tr class="row-odd"><td><p>array</p></td>
+<td><p>list</p></td>
+</tr>
+<tr class="row-even"><td><p>string</p></td>
+<td><p>str</p></td>
+</tr>
+<tr class="row-odd"><td><p>number (int)</p></td>
+<td><p>int</p></td>
+</tr>
+<tr class="row-even"><td><p>number (real)</p></td>
+<td><p>float</p></td>
+</tr>
+<tr class="row-odd"><td><p>true</p></td>
+<td><p>True</p></td>
+</tr>
+<tr class="row-even"><td><p>false</p></td>
+<td><p>False</p></td>
+</tr>
+<tr class="row-odd"><td><p>null</p></td>
+<td><p>None</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="about-jsonpath">
+<h3>About JSONPath<a class="headerlink" href="#about-jsonpath" title="Permalink to this heading"></a></h3>
+<p>Reading and writing values from/to JSON serializable objects is done
+using <a class="reference external" href="http://goessner.net/articles/JsonPath/">JSONPath</a>. It’s a syntax designed to quickly and easily refer to
+specific elements in a JSON structure. The specific flavor used in this
+library is based on <a class="reference external" href="https://pypi.org/project/jsonpath-ng/#description">jsonpath-ng</a>.</p>
+<p>Compared to Python’s normal dictionary access, JSONPath expressions can
+target multiple elements through features such as conditionals and wildcards,
+which can simplify many JSON-related operations. It’s analogous to XPath
+for XML structures.</p>
+<div class="section" id="syntax-example">
+<h4>Syntax example<a class="headerlink" href="#syntax-example" title="Permalink to this heading"></a></h4>
+<p>For this example consider the following structure:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;clients&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Johnny Example&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;john@example.com&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;orders&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">          </span><span class="p">{</span><span class="nt">&quot;address&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Streetroad 123&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;price&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">103.20</span><span class="p">},</span>
+<span class="w">          </span><span class="p">{</span><span class="nt">&quot;address&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Streetroad 123&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;price&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">98.99</span><span class="p">}</span>
+<span class="w">      </span><span class="p">]</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Jane Example&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;jane@example.com&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;orders&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">          </span><span class="p">{</span><span class="nt">&quot;address&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Waypath 321&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;price&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">22.00</span><span class="p">},</span>
+<span class="w">          </span><span class="p">{</span><span class="nt">&quot;address&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Streetroad 123&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;price&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">2330.01</span><span class="p">}</span>
+<span class="w">      </span><span class="p">]</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>In the simplest case JSONPath can replace nested access:</p>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="gh">*** Tasks ***</span>
+<span class="gu">Nested access</span>
+<span class="p">    </span><span class="c"># First order of first client, with direct dictionary access</span>
+<span class="p">    ${</span><span class="nv">value</span><span class="p">}=    </span><span class="nf">Set variable</span><span class="p">    ${</span><span class="nv">json</span><span class="p">}[</span><span class="nv">&quot;clients&quot;</span><span class="p">][</span><span class="nv">0</span><span class="p">][</span><span class="nv">&quot;orders&quot;</span><span class="p">][</span><span class="nv">0</span><span class="p">]</span>
+
+<span class="p">    </span><span class="c"># JSONPath access</span>
+<span class="p">    ${</span><span class="nv">value</span><span class="p">}=    </span><span class="nf">Get value from JSON</span><span class="p">    ${</span><span class="nv">json</span><span class="p">}    </span><span class="s">$.clients[0].orders[0]</span>
+</pre></div>
+</div>
+<p>But the power comes from complicated expressions:</p>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="gh">*** Tasks ***</span>
+<span class="gu">Complicated expressions</span>
+<span class="p">    </span><span class="c"># Find delivery addresses for all orders</span>
+<span class="p">    ${</span><span class="nv">prices</span><span class="p">}=        </span><span class="nf">Get values from JSON</span><span class="p">    </span><span class="s">$..address</span>
+
+<span class="p">    </span><span class="c"># Find orders that cost over 100</span>
+<span class="p">    ${</span><span class="nv">expensives</span><span class="p">}=    </span><span class="nf">Get values from JSON</span><span class="p">    </span><span class="s">$..orders[?(@.price&gt;100)]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="supported-expressions">
+<h4>Supported Expressions<a class="headerlink" href="#supported-expressions" title="Permalink to this heading"></a></h4>
+<p>The supported syntax elements are:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 70%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Element</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">$</span></code></p></td>
+<td><p>Root object/element</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&#64;</span></code></p></td>
+<td><p>Current object/element inside expressions</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">.</span></code> or <code class="docutils literal notranslate"><span class="pre">[]</span></code></p></td>
+<td><p>Child operator</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">..</span></code></p></td>
+<td><p>Recursive descendant operator</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">``parent``</span></code></p></td>
+<td><p>Parent operator, see <a class="reference internal" href="#functions">functions</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">*</span></code></p></td>
+<td><p>Wilcard, any element</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">,</span></code></p></td>
+<td><p>Select multiple fields</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">[n]</span></code></p></td>
+<td><p>Array index</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">[a:b:c]</span></code></p></td>
+<td><p>Array slice (start, end, step)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">[a,b]</span></code></p></td>
+<td><p>Union of indices or names</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">[?()]</span></code></p></td>
+<td><p>Apply a filter expression</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">()</span></code></p></td>
+<td><p>Script expression</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">[\\field]</span></code></p></td>
+<td><p>Sort descending by <code class="docutils literal notranslate"><span class="pre">field</span></code>, cannot be combined with
+filters.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">[/field]</span></code></p></td>
+<td><p>Sort ascending by <code class="docutils literal notranslate"><span class="pre">field</span></code>, cannot be combined with
+filters.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">``str()``</span></code></p></td>
+<td><p>Convert value to string, see <a class="reference internal" href="#functions">functions</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">``sub()``</span></code></p></td>
+<td><p>Regex substitution function, see <a class="reference internal" href="#functions">functions</a></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">``len``</span></code></p></td>
+<td><p>Calculate value’s length, see <a class="reference internal" href="#functions">functions</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">``split()``</span></code></p></td>
+<td><p>String split function, see <a class="reference internal" href="#functions">functions</a></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">+</span></code> <code class="docutils literal notranslate"><span class="pre">-</span></code> <code class="docutils literal notranslate"><span class="pre">*</span></code> <code class="docutils literal notranslate"><span class="pre">/</span></code></p></td>
+<td><p>Arithmetic functions, see <a class="reference internal" href="#functions">functions</a></p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="functions">
+<h5>Functions<a class="headerlink" href="#functions" title="Permalink to this heading"></a></h5>
+<p>This library allows JSON path expressions to include certain functions
+which can provide additional benefit to users. These functions are
+generally encapsulated in backticks (<code class="docutils literal notranslate"><span class="pre">`</span></code>). Some functions require
+you to pass arguments similar to a Python function.</p>
+<p>For example, let’s say a JSON has nodes on the JSON path
+<code class="docutils literal notranslate"><span class="pre">$.books[*].genres</span></code> which are represented as strings of genres with
+commas separating each genre. So for one book, this node might have a
+value like <code class="docutils literal notranslate"><span class="pre">horror,young-adult</span></code>. You can return a list of first genre
+for each book by using the <code class="docutils literal notranslate"><span class="pre">split</span></code> function like so:</p>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="gh">*** Task ***</span>
+<span class="gu">Get genres</span>
+<span class="p">    ${</span><span class="nv">genres</span><span class="p">}=  </span><span class="nf">Get values from JSON</span><span class="p">    </span><span class="s">$.books[*].genres.```split(,, 0, -1)```</span>
+</pre></div>
+</div>
+<p>Each functions parameters are defined here:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 44%" />
+<col style="width: 56%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Function</p></th>
+<th class="head"><p>Usage</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">str()</span></code></p></td>
+<td><p>No parameters, but parenthesis are required</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">sub(/regex/,</span> <span class="pre">repl)</span></code></p></td>
+<td><p>The regex pattern must be provided in <em>regex</em>
+and the replacement value provided in <em>repl</em></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">len</span></code></p></td>
+<td><p>No parameters and no parenthesis</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">split(char,</span> <span class="pre">segment,</span> <span class="pre">max_split)</span></code></p></td>
+<td><p>Separator character provided as <em>char</em>, which
+index from the resulting array to be returns
+provided as <em>segment</em>, and maximum number of
+splits to perform provided as <em>max_split</em>,
+<code class="docutils literal notranslate"><span class="pre">-1</span></code> for all splits.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">parent</span></code></p></td>
+<td><p>No parameters, no parenthesis</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Arithmetic Functions</strong></p>
+<p>JSON Path can be written and combined to concatenate string values
+or perform arithmetic functions on numerical values. Each JSONPath
+expression used must return the same type, and when performing
+such functions between returned lists, each list must be the same
+length. An example is included in documentation for the keyword
+<code class="docutils literal notranslate"><span class="pre">Get</span> <span class="pre">values</span> <span class="pre">from</span> <span class="pre">JSON</span></code>.</p>
+</div>
+<div class="section" id="additional-information">
+<h5>Additional Information<a class="headerlink" href="#additional-information" title="Permalink to this heading"></a></h5>
+<p>There are a multitude of different script expressions
+in addition to the elements listed above, which can
+be seen in the <a class="reference external" href="http://goessner.net/articles/JsonPath/">aforementioned article</a>.</p>
+<p>For further library usage examples, see the individual keywords.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="RPA.JSON.JSON.ROBOT_LIBRARY_DOC_FORMAT">
+<span class="sig-name descname"><span class="pre">ROBOT_LIBRARY_DOC_FORMAT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'REST'</span></em><a class="headerlink" href="#RPA.JSON.JSON.ROBOT_LIBRARY_DOC_FORMAT" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="RPA.JSON.JSON.ROBOT_LIBRARY_SCOPE">
+<span class="sig-name descname"><span class="pre">ROBOT_LIBRARY_SCOPE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'GLOBAL'</span></em><a class="headerlink" href="#RPA.JSON.JSON.ROBOT_LIBRARY_SCOPE" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.JSON.JSON.add_to_json">
+<span class="sig-name descname"><span class="pre">add_to_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">doc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">Hashable</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expr</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">Hashable</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">Hashable</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#RPA.JSON.JSON.add_to_json" title="Permalink to this definition"></a></dt>
+<dd><p>Add items into a JSON serializable object and return the result.</p>
+<p>If the target is a list, the values are appended to the end.
+If the target is a dict, the keys are either added or updated.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>doc</strong> – JSON serializable object</p></li>
+<li><p><strong>expr</strong> – JSONPath expression</p></li>
+<li><p><strong>value</strong> – values to either append or update</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>JSON serializable object of the updated JSON</p>
+</dd>
+</dl>
+<p>Robot Framework Example:</p>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="gh">*** Task ***</span>
+<span class="gu">Change the name value for all people</span>
+<span class="p">    &amp;{</span><span class="nv">before</span><span class="p">}=    </span><span class="nf">Convert string to JSON</span><span class="p">   </span><span class="s">{&quot;People&quot;: [{&quot;Name&quot;: &quot;Mark&quot;}, {&quot;Name&quot;: &quot;Jane&quot;}]}</span>
+<span class="p">    &amp;{</span><span class="nv">person</span><span class="p">}=    </span><span class="nf">Create dictionary</span><span class="p">      </span><span class="s">Name=John</span>
+<span class="p">    &amp;{</span><span class="nv">after</span><span class="p">}=     </span><span class="nf">Add to JSON</span><span class="p">    ${</span><span class="nv">before</span><span class="p">}   </span><span class="s">$.People</span><span class="p">    ${</span><span class="nv">person</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Python Example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">RPA.JSON</span> <span class="kn">import</span> <span class="n">JSON</span>
+
+<span class="c1"># Change the name value for all people</span>
+<span class="n">js</span> <span class="o">=</span> <span class="n">JSON</span><span class="p">()</span>
+<span class="n">before</span> <span class="o">=</span> <span class="n">js</span><span class="o">.</span><span class="n">convert_string_to_json</span><span class="p">(</span><span class="s1">&#39;{&quot;People&quot;: [{&quot;Name&quot;: &quot;Mark&quot;}, {&quot;Name&quot;: &quot;Jane&quot;}]}&#39;</span><span class="p">)</span>
+<span class="n">person</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;John&quot;</span><span class="p">}</span>
+<span class="n">after</span> <span class="o">=</span> <span class="n">js</span><span class="o">.</span><span class="n">add_to_json</span><span class="p">(</span><span class="n">before</span><span class="p">,</span> <span class="s2">&quot;$.People&quot;</span><span class="p">,</span> <span class="n">person</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">after</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.JSON.JSON.convert_json_to_string">
+<span class="sig-name descname"><span class="pre">convert_json_to_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">doc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">Hashable</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#RPA.JSON.JSON.convert_json_to_string" title="Permalink to this definition"></a></dt>
+<dd><p>Convert a JSON serializable object to a string and return it.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>doc</strong> – JSON serializable object</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>string of the JSON serializable object</p>
+</dd>
+</dl>
+<p>Robot Framework Example:</p>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="gh">*** Task ***</span>
+<span class="gu">Convert to string</span>
+<span class="p">    ${</span><span class="nv">obj</span><span class="p">}=    </span><span class="nf">Create dictionary</span><span class="p">    </span><span class="s">Key=Value</span>
+<span class="p">    ${</span><span class="nv">json</span><span class="p">}=   </span><span class="nf">Convert JSON to string</span><span class="p">    ${</span><span class="nv">obj</span><span class="p">}</span>
+<span class="p">    </span><span class="nf">Should be equal</span><span class="p">    ${</span><span class="nv">json</span><span class="p">}     </span><span class="s">{&quot;Key&quot;: &quot;Value&quot;}</span>
+</pre></div>
+</div>
+<p>Python Example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">RPA.JSON</span> <span class="kn">import</span> <span class="n">JSON</span>
+<span class="kn">from</span> <span class="nn">robot.libraries.BuiltIn</span> <span class="kn">import</span> <span class="n">BuiltIn</span>
+
+<span class="n">obj</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Key&quot;</span><span class="p">:</span> <span class="s2">&quot;Value&quot;</span><span class="p">}</span>
+<span class="n">json</span> <span class="o">=</span> <span class="n">JSON</span><span class="p">()</span><span class="o">.</span><span class="n">convert_json_to_string</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+<span class="n">BuiltIn</span><span class="p">()</span><span class="o">.</span><span class="n">should_be_equal</span><span class="p">(</span><span class="n">json</span><span class="p">,</span> <span class="s1">&#39;{&quot;Key&quot;: &quot;Value&quot;}&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.JSON.JSON.convert_string_to_json">
+<span class="sig-name descname"><span class="pre">convert_string_to_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">doc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">Hashable</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#RPA.JSON.JSON.convert_string_to_json" title="Permalink to this definition"></a></dt>
+<dd><p>Convert a string to a JSON serializable object and return it.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>doc</strong> – JSON string</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>JSON serializable object of the string</p>
+</dd>
+</dl>
+<p>Robot Framework Example:</p>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="gh">*** Task ***</span>
+<span class="gu">Convert to json</span>
+<span class="p">    ${</span><span class="nv">json</span><span class="p">}=    </span><span class="nf">Set variable</span><span class="p">    </span><span class="s">{&quot;Key&quot;: &quot;Value&quot;}</span>
+<span class="p">    &amp;{</span><span class="nv">obj</span><span class="p">}=     </span><span class="nf">Convert string to JSON</span><span class="p">    ${</span><span class="nv">json</span><span class="p">}</span>
+<span class="p">    </span><span class="nf">Should be equal</span><span class="p">    ${</span><span class="nv">obj.Key</span><span class="p">}    </span><span class="s">Value</span>
+</pre></div>
+</div>
+<p>Python Example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">RPA.JSON</span> <span class="kn">import</span> <span class="n">JSON</span>
+<span class="kn">from</span> <span class="nn">robot.libraries.BuiltIn</span> <span class="kn">import</span> <span class="n">BuiltIn</span>
+
+<span class="n">json</span> <span class="o">=</span> <span class="s1">&#39;{&quot;Key&quot;: &quot;Value&quot;}&#39;</span>
+<span class="n">obj</span> <span class="o">=</span> <span class="n">JSON</span><span class="p">()</span><span class="o">.</span><span class="n">convert_string_to_json</span><span class="p">(</span><span class="n">json</span><span class="p">)</span>
+<span class="n">BuiltIn</span><span class="p">()</span><span class="o">.</span><span class="n">should_be_equal</span><span class="p">(</span><span class="n">obj</span><span class="p">[</span><span class="s2">&quot;Key&quot;</span><span class="p">],</span> <span class="s2">&quot;Value&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.JSON.JSON.delete_from_json">
+<span class="sig-name descname"><span class="pre">delete_from_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">doc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">Hashable</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expr</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">Hashable</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#RPA.JSON.JSON.delete_from_json" title="Permalink to this definition"></a></dt>
+<dd><p>Delete values from a JSON serializable object and return the result.
+Will delete all values that match the expression.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>doc</strong> – JSON serializable object or string</p></li>
+<li><p><strong>expr</strong> – JSONPath expression</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>JSON serializable object with values removed</p>
+</dd>
+</dl>
+<p>Example:</p>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="gh">*** Task ***</span>
+<span class="gu">Delete all people</span>
+<span class="p">    &amp;{</span><span class="nv">before</span><span class="p">}=    </span><span class="nf">Convert string to JSON</span><span class="p">   </span><span class="s">{&quot;People&quot;: [{&quot;Name&quot;: &quot;Mark&quot;}, {&quot;Name&quot;: &quot;Jane&quot;}]}</span>
+<span class="p">    &amp;{</span><span class="nv">after</span><span class="p">}=     </span><span class="nf">Delete from JSON</span><span class="p">    ${</span><span class="nv">before</span><span class="p">}   </span><span class="s">$.People[*]</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">RPA.JSON</span> <span class="kn">import</span> <span class="n">JSON</span>
+
+<span class="c1"># Delete all people</span>
+<span class="n">before</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;People&quot;</span><span class="p">:</span> <span class="p">[{</span><span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;Mark&quot;</span><span class="p">},</span> <span class="p">{</span><span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;Jane&quot;</span><span class="p">}]}</span>
+<span class="n">after</span> <span class="o">=</span> <span class="n">JSON</span><span class="p">()</span><span class="o">.</span><span class="n">delete_from_json</span><span class="p">(</span><span class="n">before</span><span class="p">,</span> <span class="s2">&quot;$.People[*]&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">after</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.JSON.JSON.get_value_from_json">
+<span class="sig-name descname"><span class="pre">get_value_from_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">doc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">Hashable</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expr</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#RPA.JSON.JSON.get_value_from_json" title="Permalink to this definition"></a></dt>
+<dd><p>Get a single value from a JSON serializable object that matches the given expression.</p>
+<p>Raises a ValueError if there is more than one match.
+Returns the given default argument (or None) if there
+were no matches.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>doc</strong> – JSON serializable object or string</p></li>
+<li><p><strong>expr</strong> – jsonpath expression</p></li>
+<li><p><strong>default</strong> – default value to return in the absence of a match</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>string containing the match OR <cite>default</cite> if there are no matches</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>ValueError</strong> – if more than one match is discovered</p>
+</dd>
+</dl>
+<p>Short Robot Framework Example:</p>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="gh">*** Task ***</span>
+<span class="gu">Get the name value for the first person</span>
+<span class="p">    &amp;{</span><span class="nv">people</span><span class="p">}=    </span><span class="nf">Convert string to JSON</span><span class="p">   </span><span class="s">{&quot;People&quot;: [{&quot;Name&quot;: &quot;Mark&quot;}, {&quot;Name&quot;: &quot;Jane&quot;}]}</span>
+<span class="p">    ${</span><span class="nv">first</span><span class="p">}=     </span><span class="nf">Get value from JSON</span><span class="p">      ${</span><span class="nv">people</span><span class="p">}   </span><span class="s">$.People[0].Name</span>
+</pre></div>
+</div>
+<p>Short Python Example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">RPA.JSON</span> <span class="kn">import</span> <span class="n">JSON</span>
+
+<span class="c1"># Get the name value for the second person.</span>
+<span class="n">people</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;People&quot;</span><span class="p">:</span> <span class="p">[{</span><span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;Mark&quot;</span><span class="p">},</span> <span class="p">{</span><span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;Jane&quot;</span><span class="p">}]}</span>
+<span class="n">second</span> <span class="o">=</span> <span class="n">JSON</span><span class="p">()</span><span class="o">.</span><span class="n">get_value_from_json</span><span class="p">(</span><span class="n">people</span><span class="p">,</span> <span class="s2">&quot;$.People[1].Name&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">second</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Extended Robot Framework Example:</p>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="gh">*** Settings ***</span>
+<span class="kn">Library</span><span class="p">         </span><span class="nn">RPA.JSON</span>
+<span class="kn">Suite Setup</span><span class="p">     </span><span class="nf">Ingest JSON</span>
+
+<span class="gh">*** Variables ***</span>
+<span class="p">${</span><span class="nv">JSON_STRING</span><span class="p">}      </span><span class="s">{</span>
+<span class="p">...                   </span><span class="s">&quot;clients&quot;: [</span>
+<span class="p">...                     </span><span class="s">{</span>
+<span class="p">...                       </span><span class="s">&quot;name&quot;: &quot;Johnny Example&quot;,</span>
+<span class="p">...                       </span><span class="s">&quot;email&quot;: &quot;john@example.com&quot;,</span>
+<span class="p">...                       </span><span class="s">&quot;orders&quot;: [</span>
+<span class="p">...                         </span><span class="s">{&quot;address&quot;: &quot;Streetroad 123&quot;, &quot;state&quot;: &quot;TX&quot;, &quot;price&quot;: 103.20, &quot;id&quot;:&quot;guid-001&quot;},</span>
+<span class="p">...                         </span><span class="s">{&quot;address&quot;: &quot;Streetroad 123&quot;, &quot;state&quot;: &quot;TX&quot;, &quot;price&quot;: 98.99, &quot;id&quot;:&quot;guid-002&quot;}</span>
+<span class="p">...                       </span><span class="s">]</span>
+<span class="p">...                     </span><span class="s">},</span>
+<span class="p">...                     </span><span class="s">{</span>
+<span class="p">...                       </span><span class="s">&quot;name&quot;: &quot;Jane Example&quot;,</span>
+<span class="p">...                       </span><span class="s">&quot;email&quot;: &quot;jane@example.com&quot;,</span>
+<span class="p">...                       </span><span class="s">&quot;orders&quot;: [</span>
+<span class="p">...                         </span><span class="s">{&quot;address&quot;: &quot;Waypath 321&quot;, &quot;state&quot;: &quot;WA&quot;, &quot;price&quot;: 22.00, &quot;id&quot;:&quot;guid-003&quot;},</span>
+<span class="p">...                         </span><span class="s">{&quot;address&quot;: &quot;Streetroad 123&quot;, &quot;state&quot;: &quot;TX&quot;, &quot;price&quot;: 2330.01, &quot;id&quot;:&quot;guid-004&quot;},</span>
+<span class="p">...                         </span><span class="s">{&quot;address&quot;: &quot;Waypath 321&quot;, &quot;state&quot;: &quot;WA&quot;, &quot;price&quot;: 152.12, &quot;id&quot;:&quot;guid-005&quot;}</span>
+<span class="p">...                       </span><span class="s">]</span>
+<span class="p">...                     </span><span class="s">}</span>
+<span class="p">...                   </span><span class="s">]</span>
+<span class="p">...                 </span><span class="s">}</span>
+<span class="p">${</span><span class="nv">ID</span><span class="p">}               </span><span class="s">guid-003</span>
+
+<span class="gh">*** Tasks ***</span>
+<span class="gu">Get email for specific order id</span>
+<span class="p">    ${</span><span class="nv">email</span><span class="p">}=    </span><span class="nf">Get value from json</span><span class="p">    ${</span><span class="nv">JSON_DOC</span><span class="p">}    </span><span class="s">$.clients[?(@..id==&quot;</span><span class="p">${</span><span class="nv">ID</span><span class="p">}</span><span class="s">&quot;)].email</span>
+<span class="p">    </span><span class="nf">Log</span><span class="p">    </span><span class="s">\nOUTPUT IS\n </span><span class="p">${</span><span class="nv">email</span><span class="p">}    </span><span class="s">console=</span><span class="p">${</span><span class="nv">True</span><span class="p">}</span>
+<span class="p">    </span><span class="nf">Should be equal as strings</span><span class="p">    ${</span><span class="nv">email</span><span class="p">}    </span><span class="s">jane@example.com</span>
+
+<span class="gh">*** Keywords ***</span>
+<span class="gu">Ingest JSON</span>
+<span class="p">    ${</span><span class="nv">doc</span><span class="p">}=    </span><span class="nf">Convert string to json</span><span class="p">    ${</span><span class="nv">JSON_STRING</span><span class="p">}</span>
+<span class="p">    </span><span class="nf">Set suite variable</span><span class="p">    ${</span><span class="nv">JSON_DOC</span><span class="p">}    ${</span><span class="nv">doc</span><span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.JSON.JSON.get_values_from_json">
+<span class="sig-name descname"><span class="pre">get_values_from_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">doc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">Hashable</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expr</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#RPA.JSON.JSON.get_values_from_json" title="Permalink to this definition"></a></dt>
+<dd><p>Get all values from a JSON serializable object that match the given expression.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>doc</strong> – JSON serializable object or string</p></li>
+<li><p><strong>expr</strong> – JSONPath expression</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list of values that match</p>
+</dd>
+</dl>
+<p>Short Robot Framework Example:</p>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="gh">*** Task ***</span>
+<span class="gu">Get all the names for all people</span>
+<span class="p">    &amp;{</span><span class="nv">people</span><span class="p">}=    </span><span class="nf">Convert string to JSON</span><span class="p">   </span><span class="s">{&quot;People&quot;: [{&quot;Name&quot;: &quot;Mark&quot;}, {&quot;Name&quot;: &quot;Jane&quot;}]}</span>
+<span class="p">    @{</span><span class="nv">names</span><span class="p">}=     </span><span class="nf">Get values from JSON</span><span class="p">     ${</span><span class="nv">people</span><span class="p">}   </span><span class="s">$.People[*].Name</span>
+</pre></div>
+</div>
+<p>Short Python Example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">RPA.JSON</span> <span class="kn">import</span> <span class="n">JSON</span>
+
+<span class="c1"># Get all the names for all people</span>
+<span class="n">people</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;People&quot;</span><span class="p">:</span> <span class="p">[{</span><span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;Mark&quot;</span><span class="p">},</span> <span class="p">{</span><span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;Jane&quot;</span><span class="p">}]}</span>
+<span class="n">names</span> <span class="o">=</span> <span class="n">JSON</span><span class="p">()</span><span class="o">.</span><span class="n">get_values_from_json</span><span class="p">(</span><span class="n">people</span><span class="p">,</span> <span class="s2">&quot;$.People[*].Name&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">second</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Extended Robot Framework Example:</p>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="gh">*** Settings ***</span>
+<span class="kn">Library</span><span class="p">         </span><span class="nn">RPA.JSON</span>
+<span class="kn">Suite Setup</span><span class="p">     </span><span class="nf">Ingest JSON</span>
+
+<span class="gh">*** Variables ***</span>
+<span class="p">${</span><span class="nv">JSON_STRING</span><span class="p">}      </span><span class="s">{</span>
+<span class="p">...                   </span><span class="s">&quot;clients&quot;: [</span>
+<span class="p">...                     </span><span class="s">{</span>
+<span class="p">...                       </span><span class="s">&quot;name&quot;: &quot;Johnny Example&quot;,</span>
+<span class="p">...                       </span><span class="s">&quot;email&quot;: &quot;john@example.com&quot;,</span>
+<span class="p">...                       </span><span class="s">&quot;orders&quot;: [</span>
+<span class="p">...                         </span><span class="s">{&quot;address&quot;: &quot;Streetroad 123&quot;, &quot;state&quot;: &quot;TX&quot;, &quot;price&quot;: 103.20, &quot;id&quot;:&quot;guid-001&quot;},</span>
+<span class="p">...                         </span><span class="s">{&quot;address&quot;: &quot;Streetroad 123&quot;, &quot;state&quot;: &quot;TX&quot;, &quot;price&quot;: 98.99, &quot;id&quot;:&quot;guid-002&quot;}</span>
+<span class="p">...                       </span><span class="s">]</span>
+<span class="p">...                     </span><span class="s">},</span>
+<span class="p">...                     </span><span class="s">{</span>
+<span class="p">...                       </span><span class="s">&quot;name&quot;: &quot;Jane Example&quot;,</span>
+<span class="p">...                       </span><span class="s">&quot;email&quot;: &quot;jane@example.com&quot;,</span>
+<span class="p">...                       </span><span class="s">&quot;orders&quot;: [</span>
+<span class="p">...                         </span><span class="s">{&quot;address&quot;: &quot;Waypath 321&quot;, &quot;state&quot;: &quot;WA&quot;, &quot;price&quot;: 22.00, &quot;id&quot;:&quot;guid-003&quot;},</span>
+<span class="p">...                         </span><span class="s">{&quot;address&quot;: &quot;Streetroad 123&quot;, &quot;state&quot;: &quot;TX&quot;, &quot;price&quot;: 2330.01, &quot;id&quot;:&quot;guid-004&quot;},</span>
+<span class="p">...                         </span><span class="s">{&quot;address&quot;: &quot;Waypath 321&quot;, &quot;state&quot;: &quot;WA&quot;, &quot;price&quot;: 152.12, &quot;id&quot;:&quot;guid-005&quot;}</span>
+<span class="p">...                       </span><span class="s">]</span>
+<span class="p">...                     </span><span class="s">}</span>
+<span class="p">...                   </span><span class="s">]</span>
+<span class="p">...                 </span><span class="s">}</span>
+<span class="p">${</span><span class="nv">ID</span><span class="p">}               </span><span class="s">guid-003</span>
+
+<span class="gh">*** Tasks ***</span>
+<span class="gu">Get All Prices and Order Ids</span>
+<span class="p">    </span><span class="c"># Arithmetic operations only work when lists are of equal lengths and types.</span>
+<span class="p">    ${</span><span class="nv">prices</span><span class="p">}=    </span><span class="nf">Get values from json</span>
+<span class="p">    ...    ${</span><span class="nv">JSON_DOC</span><span class="p">}</span>
+<span class="p">    ...    </span><span class="s">$.clients[*].orders[*].id + &quot; has price &quot; + $.clients[*].orders[*].price.```str()```</span>
+<span class="p">    </span><span class="nf">Log</span><span class="p">    </span><span class="s">\nOUTPUT IS\n </span><span class="p">${</span><span class="nv">prices</span><span class="p">}    </span><span class="s">console=</span><span class="p">${</span><span class="nv">True</span><span class="p">}</span>
+<span class="p">    </span><span class="nf">Should be equal as strings</span><span class="p">    ${</span><span class="nv">prices</span><span class="p">}</span>
+<span class="p">    ...    </span><span class="s">[&#39;guid-001 has price 103.2&#39;, &#39;guid-002 has price 98.99&#39;, &#39;guid-003 has price 22.0&#39;, &#39;guid-004 has price 2330.01&#39;, &#39;guid-005 has price 152.12&#39;]</span>
+
+<span class="gu">Find Only Valid Emails With Regex</span>
+<span class="p">    </span><span class="c"># The regex used in this example is simplistic and</span>
+<span class="p">    </span><span class="c"># will not work with all email addresses</span>
+<span class="p">    ${</span><span class="nv">emails</span><span class="p">}=    </span><span class="nf">Get values from json</span>
+<span class="p">    ...    ${</span><span class="nv">JSON_DOC</span><span class="p">}</span>
+<span class="p">    ...    </span><span class="s">$.clients[?(@.email =~ &quot;[a-zA-Z]+@[a-zA-Z]+\.[a-zA-Z]+&quot;)].email</span>
+<span class="p">    </span><span class="nf">Log</span><span class="p">    </span><span class="s">\nOUTPUT IS\n </span><span class="p">${</span><span class="nv">emails</span><span class="p">}    </span><span class="s">console=</span><span class="p">${</span><span class="nv">True</span><span class="p">}</span>
+<span class="p">    </span><span class="nf">Should be equal as strings</span><span class="p">    ${</span><span class="nv">emails</span><span class="p">}    </span><span class="s">[&#39;john@example.com&#39;, &#39;jane@example.com&#39;]</span>
+
+<span class="gu">Find Orders From Texas Over 100</span>
+<span class="p">    </span><span class="c"># The regex used in this example is simplistic and</span>
+<span class="p">    </span><span class="c"># will not work with all email addresses</span>
+<span class="p">    ${</span><span class="nv">orders</span><span class="p">}=    </span><span class="nf">Get values from json</span>
+<span class="p">    ...    ${</span><span class="nv">JSON_DOC</span><span class="p">}</span>
+<span class="p">    ...    </span><span class="s">$.clients[*].orders[?(@.price &gt; 100 &amp; @.state == &quot;TX&quot;)]</span>
+<span class="p">    </span><span class="nf">Log</span><span class="p">    </span><span class="s">\nOUTPUT IS\n </span><span class="p">${</span><span class="nv">orders</span><span class="p">}    </span><span class="s">console=</span><span class="p">${</span><span class="nv">True</span><span class="p">}</span>
+<span class="p">    </span><span class="nf">Should be equal as strings</span><span class="p">    ${</span><span class="nv">orders</span><span class="p">}</span>
+<span class="p">    ...    </span><span class="s">[{&#39;address&#39;: &#39;Streetroad 123&#39;, &#39;state&#39;: &#39;TX&#39;, &#39;price&#39;: 103.2, &#39;id&#39;: &#39;guid-001&#39;}, {&#39;address&#39;: &#39;Streetroad 123&#39;, &#39;state&#39;: &#39;TX&#39;, &#39;price&#39;: 2330.01, &#39;id&#39;: &#39;guid-004&#39;}]</span>
+
+
+<span class="gh">*** Keywords ***</span>
+<span class="gu">Ingest JSON</span>
+<span class="p">    ${</span><span class="nv">doc</span><span class="p">}=    </span><span class="nf">Convert string to json</span><span class="p">    ${</span><span class="nv">JSON_STRING</span><span class="p">}</span>
+<span class="p">    </span><span class="nf">Set suite variable</span><span class="p">    ${</span><span class="nv">JSON_DOC</span><span class="p">}    ${</span><span class="nv">doc</span><span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.JSON.JSON.load_json_from_file">
+<span class="sig-name descname"><span class="pre">load_json_from_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoding</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'utf-8'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">Hashable</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#RPA.JSON.JSON.load_json_from_file" title="Permalink to this definition"></a></dt>
+<dd><p>Load JSON data from a file, and return it as JSON serializable object.
+Depending on the input file the object can be either a dictionary,
+a list, or a scalar value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> – path to input file</p></li>
+<li><p><strong>encoding</strong> – file character encoding</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>JSON serializable object of the JSON file</p>
+</dd>
+</dl>
+<p>Example:</p>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="gh">*** Task ***</span>
+<span class="gu">Load json</span>
+<span class="p">    &amp;{</span><span class="nv">auth</span><span class="p">}=    </span><span class="nf">Load JSON from file</span><span class="p">    </span><span class="s">auth.json</span>
+<span class="p">    </span><span class="nf">Log</span><span class="p">   </span><span class="s">Current auth token: </span><span class="p">${</span><span class="nv">auth.token</span><span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.JSON.JSON.save_json_to_file">
+<span class="sig-name descname"><span class="pre">save_json_to_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">doc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">Hashable</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">indent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encoding</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'utf-8'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#RPA.JSON.JSON.save_json_to_file" title="Permalink to this definition"></a></dt>
+<dd><p>Save a JSON serializable object or a string containing
+a JSON value into a file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>doc</strong> – JSON serializable object or string</p></li>
+<li><p><strong>filename</strong> – path to output file</p></li>
+<li><p><strong>indent</strong> – if given this value is used for json file indent</p></li>
+<li><p><strong>encoding</strong> – file character encoding</p></li>
+</ul>
+</dd>
+</dl>
+<p>Robot Framework Example:</p>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="gh">*** Tasks ***</span>
+<span class="gu">Save dictionary to file</span>
+<span class="p">    ${</span><span class="nv">john</span><span class="p">}=    </span><span class="nf">Create dictionary</span><span class="p">    </span><span class="s">name=John</span><span class="p">    </span><span class="s">mail=john@example.com</span>
+<span class="p">    </span><span class="nf">Save JSON to file</span><span class="p">    ${</span><span class="nv">john</span><span class="p">}    </span><span class="s">john.json</span>
+
+<span class="gu">Save string to file</span>
+<span class="p">    ${</span><span class="nv">mark</span><span class="p">}=    </span><span class="nf">Set variable</span><span class="p">    </span><span class="s">{&quot;name&quot;: &quot;Mark&quot;, &quot;mail&quot;: &quot;mark@example.com&quot;}</span>
+<span class="p">    </span><span class="nf">Save JSON to file</span><span class="p">    ${</span><span class="nv">mark</span><span class="p">}    </span><span class="s">mark.json</span>
+</pre></div>
+</div>
+<p>Python Example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">RPA.JSON</span> <span class="kn">import</span> <span class="n">JSON</span>
+
+<span class="c1"># Save dictionary to file.</span>
+<span class="n">john</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;John&quot;</span><span class="p">,</span> <span class="s2">&quot;mail&quot;</span><span class="p">:</span> <span class="s2">&quot;john@example.com&quot;</span><span class="p">}</span>
+<span class="n">JSON</span><span class="p">()</span><span class="o">.</span><span class="n">save_json_to_file</span><span class="p">(</span><span class="n">john</span><span class="p">,</span> <span class="s2">&quot;john.json&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.JSON.JSON.update_value_to_json">
+<span class="sig-name descname"><span class="pre">update_value_to_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">doc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">Hashable</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expr</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">Hashable</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">Hashable</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#RPA.JSON.JSON.update_value_to_json" title="Permalink to this definition"></a></dt>
+<dd><p>Update existing values in a JSON serializable object and return the result.
+Will change all values that match the expression.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>doc</strong> – JSON or string</p></li>
+<li><p><strong>expr</strong> – JSONPath expression</p></li>
+<li><p><strong>value</strong> – New value for the matching item(s)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>JSON serializable object with updated results</p>
+</dd>
+</dl>
+<p>Short Robot Framework Example:</p>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="gh">*** Tasks ***</span>
+<span class="gu">Change the name key for all people</span>
+<span class="p">    &amp;{</span><span class="nv">before</span><span class="p">}=    </span><span class="nf">Convert string to JSON</span><span class="p">   </span><span class="s">{&quot;People&quot;: [{&quot;Name&quot;: &quot;Mark&quot;}, {&quot;Name&quot;: &quot;Jane&quot;}]}</span>
+<span class="p">    &amp;{</span><span class="nv">after</span><span class="p">}=     </span><span class="nf">Update value to JSON</span><span class="p">     ${</span><span class="nv">before</span><span class="p">}   </span><span class="s">$.People[*].Name</span><span class="p">    </span><span class="s">JohnMalkovich</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">RPA.JSON</span> <span class="kn">import</span> <span class="n">JSON</span>
+
+<span class="c1"># Change the name key for all people</span>
+<span class="n">before</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;People&quot;</span><span class="p">:</span> <span class="p">[{</span><span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;Mark&quot;</span><span class="p">},</span> <span class="p">{</span><span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;Jane&quot;</span><span class="p">}]}</span>
+<span class="n">after</span> <span class="o">=</span> <span class="n">JSON</span><span class="p">()</span><span class="o">.</span><span class="n">update_value_to_json</span><span class="p">(</span><span class="n">before</span><span class="p">,</span> <span class="s2">&quot;$.People[*].Name&quot;</span><span class="p">,</span><span class="s2">&quot;JohnMalkovich&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">after</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Extended Robot Framework Example:</p>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="gh">*** Settings ***</span>
+<span class="kn">Library</span><span class="p">         </span><span class="nn">RPA.JSON</span>
+<span class="kn">Library</span><span class="p">    </span><span class="nn">Collections</span>
+<span class="kn">Suite Setup</span><span class="p">     </span><span class="nf">Ingest JSON</span>
+
+<span class="gh">*** Variables ***</span>
+<span class="p">${</span><span class="nv">JSON_STRING</span><span class="p">}      </span><span class="s">{</span>
+<span class="p">...                   </span><span class="s">&quot;clients&quot;: [</span>
+<span class="p">...                     </span><span class="s">{</span>
+<span class="p">...                       </span><span class="s">&quot;name&quot;: &quot;Johnny Example&quot;,</span>
+<span class="p">...                       </span><span class="s">&quot;email&quot;: &quot;john@example.com&quot;,</span>
+<span class="p">...                       </span><span class="s">&quot;id&quot;: &quot;user-001&quot;,</span>
+<span class="p">...                       </span><span class="s">&quot;orders&quot;: [</span>
+<span class="p">...                         </span><span class="s">{&quot;address&quot;: &quot;Streetroad 123&quot;, &quot;state&quot;: &quot;TX&quot;, &quot;price&quot;: 103.20, &quot;id&quot;:&quot;guid-001&quot;},</span>
+<span class="p">...                         </span><span class="s">{&quot;address&quot;: &quot;Streetroad 123&quot;, &quot;state&quot;: &quot;TX&quot;, &quot;price&quot;: 98.99, &quot;id&quot;:&quot;guid-002&quot;}</span>
+<span class="p">...                       </span><span class="s">]</span>
+<span class="p">...                     </span><span class="s">},</span>
+<span class="p">...                     </span><span class="s">{</span>
+<span class="p">...                       </span><span class="s">&quot;name&quot;: &quot;Jane Example&quot;,</span>
+<span class="p">...                       </span><span class="s">&quot;email&quot;: &quot;jane@example.com&quot;,</span>
+<span class="p">...                       </span><span class="s">&quot;id&quot;: &quot;user-002&quot;,</span>
+<span class="p">...                       </span><span class="s">&quot;orders&quot;: [</span>
+<span class="p">...                         </span><span class="s">{&quot;address&quot;: &quot;Waypath 321&quot;, &quot;state&quot;: &quot;WA&quot;, &quot;price&quot;: 22.00, &quot;id&quot;:&quot;guid-003&quot;},</span>
+<span class="p">...                         </span><span class="s">{&quot;address&quot;: &quot;Streetroad 123&quot;, &quot;state&quot;: &quot;TX&quot;, &quot;price&quot;: 2330.01, &quot;id&quot;:&quot;guid-004&quot;},</span>
+<span class="p">...                         </span><span class="s">{&quot;address&quot;: &quot;Waypath 321&quot;, &quot;state&quot;: &quot;WA&quot;, &quot;price&quot;: 152.12, &quot;id&quot;:&quot;guid-005&quot;}</span>
+<span class="p">...                       </span><span class="s">]</span>
+<span class="p">...                     </span><span class="s">}</span>
+<span class="p">...                   </span><span class="s">]</span>
+<span class="p">...                 </span><span class="s">}</span>
+<span class="p">${</span><span class="nv">ID</span><span class="p">}               </span><span class="s">guid-003</span>
+
+<span class="gh">*** Tasks ***</span>
+<span class="gu">Update user email</span>
+<span class="p">    ${</span><span class="nv">updated_doc</span><span class="p">}=    </span><span class="nf">Update value to json</span>
+<span class="p">    ...    ${</span><span class="nv">JSON_DOC</span><span class="p">}</span>
+<span class="p">    ...    </span><span class="s">$.clients[?(@.id==&quot;user-001&quot;)].email</span>
+<span class="p">    ...    </span><span class="s">johnny@example.com</span>
+<span class="p">    </span><span class="nf">Log</span><span class="p">    </span><span class="s">\nNEW JSON IS\n </span><span class="p">${</span><span class="nv">updated_doc</span><span class="p">}    </span><span class="s">console=</span><span class="p">${</span><span class="nv">True</span><span class="p">}</span>
+<span class="p">    ${</span><span class="nv">new_email</span><span class="p">}=    </span><span class="nf">Get value from json</span><span class="p">    ${</span><span class="nv">updated_doc</span><span class="p">}    </span><span class="s">$.clients[?(@.id==&quot;user-001&quot;)].email</span>
+<span class="p">    </span><span class="nf">Should be equal as strings</span><span class="p">    ${</span><span class="nv">new_email</span><span class="p">}    </span><span class="s">johnny@example.com</span>
+
+<span class="gu">Add additional charge to all prices in WA</span>
+<span class="p">    </span><span class="c"># This example also shows how the update keyword changes the original JSON doc in memory.</span>
+<span class="p">    ${</span><span class="nv">id_price</span><span class="p">}=    </span><span class="nf">Get values from json</span>
+<span class="p">    ...    ${</span><span class="nv">JSON_DOC</span><span class="p">}</span>
+<span class="p">    ...    </span><span class="s">$.clients[*].orders[?(@.state==&quot;WA&quot;)].id,price</span>
+<span class="p">    FOR    ${</span><span class="nv">order_id</span><span class="p">}    ${</span><span class="nv">price</span><span class="p">}    IN    @{</span><span class="nv">id_price</span><span class="p">}</span>
+<span class="p">        </span><span class="nf">Update value to json</span><span class="p">    ${</span><span class="nv">JSON_DOC</span><span class="p">}    </span><span class="s">$.clients[*].orders[?(@.id==&quot;</span><span class="p">${</span><span class="nv">order_id</span><span class="p">}</span><span class="s">&quot;)].price</span><span class="p">    ${</span><span class="nv">{</span><span class="p">${</span><span class="nv">price</span><span class="p">}</span><span class="nv"> * 1.06</span><span class="p">}</span><span class="s">}</span>
+<span class="p">    END</span>
+<span class="p">    </span><span class="nf">Log</span><span class="p">    </span><span class="s">\nNEW JSON IS\n </span><span class="p">${</span><span class="nv">JSON_DOC</span><span class="p">}    </span><span class="s">console=</span><span class="p">${</span><span class="nv">True</span><span class="p">}</span>
+<span class="p">    ${</span><span class="nv">one_price</span><span class="p">}=    </span><span class="nf">Get value from json</span><span class="p">    ${</span><span class="nv">JSON_DOC</span><span class="p">}    </span><span class="s">$..orders[?(@.id==</span><span class="p">${</span><span class="nv">ID</span><span class="p">}</span><span class="s">)].price</span>
+<span class="p">    </span><span class="nf">Should be equal as numbers</span><span class="p">    ${</span><span class="nv">one_price</span><span class="p">}    </span><span class="s">23.32</span>
+
+<span class="gh">*** Keywords ***</span>
+<span class="gu">Ingest JSON</span>
+<span class="p">    ${</span><span class="nv">doc</span><span class="p">}=    </span><span class="nf">Convert string to json</span><span class="p">    ${</span><span class="nv">JSON_STRING</span><span class="p">}</span>
+<span class="p">    </span><span class="nf">Set suite variable</span><span class="p">    ${</span><span class="nv">JSON_DOC</span><span class="p">}    ${</span><span class="nv">doc</span><span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+</div>
+</div>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+          </div>
+	<div id="cookieConsentContainer">
+  <div class="cookieDesc">
+    <p>
+      This website uses cookies to enhance the user experience.
+      By using the website you accept the use of cookies.
+      You can check our <a href="https://robocorp.com/privacy-policy">Privacy Policy</a> to learn more.
+    </p>
+  </div>
+  <div class="cookieButton">
+    <a onClick="cookieDismiss();">
+      I understand
+    </a>
+  </div>
+</div>
+	<div id="robocorpBanner">
+  <div id="bannerContent">
+    <div id="bannerDismiss">
+      <a onClick="bannerDismiss();">
+        <img src="/_static/icon_cross.svg"/>
+      </a>
+    </div>
+    <a href="https://robocorp.com">
+      <img id="bannerLogo" src="https://cdn.robocorp.com/brand/Logo/Negative logo transparent/Negative logo transparent.svg"/>
+    </a>
+    <span id="bannerText">
+      The automation stack for RPA Framework.
+    </span>
+    <a id="bannerButton" href="https://robocorp.com/get-started">
+      Get started <img src="/_static/icon_arrow.svg"/>
+    </a>
+  </div>
+</div>
+
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="JSON" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../mfa/index.html" class="btn btn-neutral float-right" title="MFA" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023 Robocorp Technologies, Inc..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

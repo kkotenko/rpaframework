@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Python API &mdash; RPA Framework  documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/iframeResizer.min.js"></script>
+        <script src="../../_static/custom.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Email.ImapSmtp" href="../email_imapsmtp/index.html" />
+    <link rel="prev" title="Email.Exchange" href="index.html" />
+	<!-- Cookie consent -->
+<link async rel="stylesheet" type="text/css" href="../../_static/cookie.css"/>
+<script async src="../../_static/cookie.js"></script>
+<!-- Robocorp banner -->
+<link async rel="stylesheet" type="text/css" href="../../_static/robocorp.css"/>
+<script async src="../../_static/robocorp.js"></script>
+<!--            -->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-151433780-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-151433780-3');
+</script>
+<!--            -->
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            RPA Framework
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Libraries</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../archive/index.html">Archive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../assistant/index.html">Assistant</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../browser/index.html">Browser</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../browser_playwright/index.html">Browser.Playwright</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../browser_selenium/index.html">Browser.Selenium</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../calendar/index.html">Calendar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cloud_aws/index.html">Cloud.AWS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cloud_azure/index.html">Cloud.Azure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cloud_google/index.html">Cloud.Google</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../crypto/index.html">Crypto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../database/index.html">Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../desktop/index.html">Desktop</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../desktop_clipboard/index.html">Desktop.Clipboard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../desktop_operatingsystem/index.html">Desktop.OperatingSystem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../desktop_windows/index.html">Desktop.Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentai/index.html">DocumentAI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentai_base64ai/index.html">DocumentAI.Base64AI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentai_nanonets/index.html">DocumentAI.Nanonets</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Email.Exchange</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Python API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../email_imapsmtp/index.html">Email.ImapSmtp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../excel_application/index.html">Excel.Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../excel_files/index.html">Excel.Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../filesystem/index.html">FileSystem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ftp/index.html">FTP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../http/index.html">HTTP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hubspot/index.html">HubSpot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../images/index.html">Images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../javaaccessbridge/index.html">JavaAccessBridge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../json/index.html">JSON</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mfa/index.html">MFA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../msgraph/index.html">MSGraph</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../netsuite/index.html">Netsuite</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notifier/index.html">Notifier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../openai/index.html">OpenAI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../outlook_application/index.html">Outlook.Application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pdf/index.html">PDF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../robocorp_process/index.html">Robocorp.Process</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../robocorp_storage/index.html">Robocorp.Storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../robocorp_vault/index.html">Robocorp.Vault</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../robocorp_workitems/index.html">Robocorp.WorkItems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../robotloglistener/index.html">RobotLogListener</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../salesforce/index.html">Salesforce</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sap/index.html">SAP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../slack/index.html">Slack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../smartsheet/index.html">Smartsheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tables/index.html">Tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/index.html">Tasks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../twitter/index.html">Twitter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../windows/index.html">Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../word_application/index.html">Word.Application</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Project</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../releasenotes.html">Release notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/guide.html">Contribution guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/conventions.html">Project conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/todos.html">TODO</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">RPA Framework</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Email.Exchange</a></li>
+      <li class="breadcrumb-item active">Python API</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/libraries/email_exchange/python.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+	
+           <div itemprop="articleBody">
+             
+  <div class="section" id="python-api">
+<h1>Python API<a class="headerlink" href="#python-api" title="Permalink to this heading"></a></h1>
+<div class="section" id="exchange">
+<h2>Exchange<a class="headerlink" href="#exchange" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="RPA.Email.Exchange.Exchange">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">RPA.Email.Exchange.</span></span><span class="sig-name descname"><span class="pre">Exchange</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vault_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vault_token_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tenant</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.Email.Exchange.Exchange" title="Permalink to this definition"></a></dt>
+<dd><p><cite>Exchange</cite> is a library for sending, reading, and deleting emails.
+<cite>Exchange</cite> is interfacing with Exchange Web Services (EWS).</p>
+<p>For more information about server settings, see
+<a class="reference external" href="https://support.microsoft.com/en-us/office/server-settings-you-ll-need-from-your-email-provider-c82de912-adcc-4787-8283-45a1161f3cc3">this Microsoft support article</a>.</p>
+<p><strong>Examples</strong></p>
+<p><strong>Robot Framework</strong></p>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="gh">*** Settings ***</span>
+<span class="kn">Library</span><span class="p">     </span><span class="nn">RPA.Email.Exchange</span>
+<span class="p">...     </span><span class="s">vault_name=email_oauth_microsoft</span><span class="p">    </span><span class="s">vault_token_key=token</span>
+<span class="p">...     </span><span class="s">tenant=ztzvn.onmicrosoft.com</span><span class="p">  </span><span class="c"># your custom tenant here</span>
+<span class="kn">Task Setup</span><span class="p">      </span><span class="nf">Ensure Auth</span>
+
+<span class="gh">*** Variables ***</span>
+<span class="p">${</span><span class="nv">ACCOUNT</span><span class="p">}              </span><span class="s">ACCOUNT_NAME</span>
+<span class="p">${</span><span class="nv">RECIPIENT_ADDRESS</span><span class="p">}    </span><span class="s">RECIPIENT</span>
+<span class="p">${</span><span class="nv">IMAGES</span><span class="p">}               </span><span class="s">myimage.png</span>
+<span class="p">${</span><span class="nv">ATTACHMENTS</span><span class="p">}          </span><span class="s">C:</span><span class="p">${</span><span class="nv">/</span><span class="p">}</span><span class="s">files</span><span class="p">${</span><span class="nv">/</span><span class="p">}</span><span class="s">mydocument.pdf</span>
+
+<span class="gh">*** Keywords ***</span>
+<span class="gu">Ensure Auth</span>
+<span class="p">    ${</span><span class="nv">secrets</span><span class="p">} =    </span><span class="nf">Get Secret</span><span class="p">    </span><span class="s">email_oauth_microsoft</span>
+<span class="p">    </span><span class="nf">RPA.Email.Exchange.Authorize</span><span class="p">    ${</span><span class="nv">ACCOUNT</span><span class="p">}</span>
+<span class="p">    ...    </span><span class="s">is_oauth=</span><span class="p">${</span><span class="nv">True</span><span class="p">}  </span><span class="c"># use the OAuth2 auth code flow (required)</span>
+<span class="p">    ...    </span><span class="s">client_id=</span><span class="p">${</span><span class="nv">secrets</span><span class="p">}[</span><span class="nv">client_id</span><span class="p">]  </span><span class="c"># app ID</span>
+<span class="p">    ...    </span><span class="s">client_secret=</span><span class="p">${</span><span class="nv">secrets</span><span class="p">}[</span><span class="nv">client_secret</span><span class="p">]  </span><span class="c"># app password</span>
+<span class="p">    ...    </span><span class="s">token=</span><span class="p">${</span><span class="nv">secrets</span><span class="p">}[</span><span class="nv">token</span><span class="p">]  </span><span class="c"># token dict (access, refresh, scope etc.)</span>
+
+<span class="gh">*** Tasks ***</span>
+<span class="gu">Task of sending email</span>
+<span class="p">    </span><span class="nf">Send Message</span><span class="p">  </span><span class="s">recipients=</span><span class="p">${</span><span class="nv">RECIPIENT_ADDRESS</span><span class="p">}</span>
+<span class="p">    ...           </span><span class="s">subject=Exchange Message from RPA Robot</span>
+<span class="p">    ...           </span><span class="s">body=&lt;p&gt;Exchange RPA Robot message body&lt;br&gt;&lt;img src=&#39;myimage.png&#39;/&gt;&lt;/p&gt;</span>
+<span class="p">    ...           </span><span class="s">save=</span><span class="p">${</span><span class="nv">TRUE</span><span class="p">}</span>
+<span class="p">    ...           </span><span class="s">html=</span><span class="p">${</span><span class="nv">TRUE</span><span class="p">}</span>
+<span class="p">    ...           </span><span class="s">images=</span><span class="p">${</span><span class="nv">IMAGES</span><span class="p">}</span>
+<span class="p">    ...           </span><span class="s">cc=EMAIL_ADDRESS</span>
+<span class="p">    ...           </span><span class="s">bcc=EMAIL_ADDRESS</span>
+<span class="p">    ...           </span><span class="s">attachments=</span><span class="p">${</span><span class="nv">ATTACHMENTS</span><span class="p">}</span>
+
+<span class="gu">Task of listing messages</span>
+<span class="p">    </span><span class="c"># Attachments are saved specifically with a keyword Save Attachments</span>
+<span class="p">    ${</span><span class="nv">messages</span><span class="p">}=    </span><span class="nf">List Messages</span>
+<span class="p">    FOR    ${</span><span class="nv">msg</span><span class="p">}    IN    @{</span><span class="nv">messages</span><span class="p">}</span>
+<span class="p">        </span><span class="nf">Log Many</span><span class="p">    ${</span><span class="nv">msg</span><span class="p">}</span>
+<span class="p">        ${</span><span class="nv">attachments</span><span class="p">}=    </span><span class="nf">Run Keyword If</span><span class="p">    </span><span class="s">&quot;</span><span class="p">${</span><span class="nv">msg</span><span class="p">}[</span><span class="nv">subject</span><span class="p">]</span><span class="s">&quot;==&quot;about my orders&quot;</span>
+<span class="p">        ...    </span><span class="s">Save Attachments</span>
+<span class="p">        ...    ${</span><span class="nv">msg</span><span class="p">}</span>
+<span class="p">        ...    </span><span class="s">save_dir=</span><span class="p">${</span><span class="nv">CURDIR</span><span class="p">}${</span><span class="nv">/</span><span class="p">}</span><span class="s">savedir</span>
+<span class="p">    END</span>
+<span class="p">    </span><span class="c"># Using save_dir all attachments in listed messages are saved</span>
+<span class="p">    ${</span><span class="nv">messages</span><span class="p">}=    </span><span class="nf">List Messages</span>
+<span class="p">    ...    </span><span class="s">INBOX/Problems/sub1</span>
+<span class="p">    ...    </span><span class="s">criterion=subject:&#39;about my orders&#39;</span>
+<span class="p">    ...    </span><span class="s">save_dir=</span><span class="p">${</span><span class="nv">CURDIR</span><span class="p">}${</span><span class="nv">/</span><span class="p">}</span><span class="s">savedir2</span>
+<span class="p">    FOR    ${</span><span class="nv">msg</span><span class="p">}    IN    @{</span><span class="nv">messages</span><span class="p">}</span>
+<span class="p">        </span><span class="nf">Log Many</span><span class="p">    ${</span><span class="nv">msg</span><span class="p">}</span>
+<span class="p">    END</span>
+
+<span class="gu">Task of moving messages</span>
+<span class="p">    </span><span class="nf">Move Messages</span><span class="p">    </span><span class="s">criterion=subject:&#39;about my orders&#39;</span>
+<span class="p">    ...    </span><span class="s">source=INBOX/Processed Purchase Invoices/sub2</span>
+<span class="p">    ...    </span><span class="s">target=INBOX/Problems/sub1</span>
+</pre></div>
+</div>
+<p><strong>Python</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">RPA.Email.Exchange</span> <span class="kn">import</span> <span class="n">Exchange</span>
+<span class="kn">from</span> <span class="nn">RPA.Robocorp.Vault</span> <span class="kn">import</span> <span class="n">Vault</span>
+
+<span class="n">vault_name</span> <span class="o">=</span> <span class="s2">&quot;email_oauth_microsoft&quot;</span>
+<span class="n">secrets</span> <span class="o">=</span> <span class="n">Vault</span><span class="p">()</span><span class="o">.</span><span class="n">get_secret</span><span class="p">(</span><span class="n">vault_name</span><span class="p">)</span>
+<span class="n">ex_account</span> <span class="o">=</span> <span class="s2">&quot;ACCOUNT_NAME&quot;</span>
+
+<span class="n">mail</span> <span class="o">=</span> <span class="n">Exchange</span><span class="p">(</span>
+    <span class="n">vault_name</span><span class="o">=</span><span class="n">vault_name</span><span class="p">,</span>
+    <span class="n">vault_token_key</span><span class="o">=</span><span class="s2">&quot;token&quot;</span><span class="p">,</span>
+    <span class="n">tenant</span><span class="o">=</span><span class="s2">&quot;ztzvn.onmicrosoft.com&quot;</span>
+<span class="p">)</span>
+<span class="n">mail</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span>
+    <span class="n">username</span><span class="o">=</span><span class="n">ex_account</span><span class="p">,</span>
+    <span class="n">is_oauth</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">client_id</span><span class="o">=</span><span class="n">secrets</span><span class="p">[</span><span class="s2">&quot;client_id&quot;</span><span class="p">],</span>
+    <span class="n">client_secret</span><span class="o">=</span><span class="n">secrets</span><span class="p">[</span><span class="s2">&quot;client_secret&quot;</span><span class="p">],</span>
+    <span class="n">token</span><span class="o">=</span><span class="n">secrets</span><span class="p">[</span><span class="s2">&quot;token&quot;</span><span class="p">]</span>
+<span class="p">)</span>
+<span class="n">mail</span><span class="o">.</span><span class="n">send_message</span><span class="p">(</span>
+    <span class="n">recipients</span><span class="o">=</span><span class="s2">&quot;RECIPIENT&quot;</span><span class="p">,</span>
+    <span class="n">subject</span><span class="o">=</span><span class="s2">&quot;Message from RPA Python&quot;</span><span class="p">,</span>
+    <span class="n">body</span><span class="o">=</span><span class="s2">&quot;RPA Python message body&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>OAuth2</strong></p>
+<p>The OAuth2 flow is the only way of authorizing at the moment as Microsoft disabled
+entirely the usage of passwords, even App Passwords. And since you have to work
+with tokens now and because this library has the capability to automatically
+refresh an expired token, please don’t forget to initialize the library with the
+following parameters: <cite>vault_name</cite>, <cite>vault_token_key</cite> and <cite>tenant</cite>.</p>
+<p>Learn more on how to use the OAuth2 flow in this Portal robot
+<a class="reference external" href="https://github.com/robocorp/example-oauth-email">example-oauth-email</a>.</p>
+<p><strong>About criterion parameter</strong></p>
+<p>Following table shows possible criterion keys that can be used to filter emails.
+There apply to all keywords which have <code class="docutils literal notranslate"><span class="pre">criterion</span></code> parameter.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 67%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Key</p></th>
+<th class="head"><p>Effective search</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>subject</p></td>
+<td><p>subject to match</p></td>
+</tr>
+<tr class="row-odd"><td><p>subject_contains</p></td>
+<td><p>subject to contain</p></td>
+</tr>
+<tr class="row-even"><td><p>body</p></td>
+<td><p>body to match</p></td>
+</tr>
+<tr class="row-odd"><td><p>body_contains</p></td>
+<td><p>body to contain</p></td>
+</tr>
+<tr class="row-even"><td><p>sender</p></td>
+<td><p>sender (from) to match</p></td>
+</tr>
+<tr class="row-odd"><td><p>sender_contains</p></td>
+<td><p>sender (from) to contain</p></td>
+</tr>
+<tr class="row-even"><td><p>before</p></td>
+<td><p>received time before this time</p></td>
+</tr>
+<tr class="row-odd"><td><p>after</p></td>
+<td><p>received time after this time</p></td>
+</tr>
+<tr class="row-even"><td><p>between</p></td>
+<td><p>received time between start and end</p></td>
+</tr>
+<tr class="row-odd"><td><p>category</p></td>
+<td><p>categories to match</p></td>
+</tr>
+<tr class="row-even"><td><p>category_contains</p></td>
+<td><p>categories to contain</p></td>
+</tr>
+<tr class="row-odd"><td><p>importance</p></td>
+<td><p>importance to match</p></td>
+</tr>
+</tbody>
+</table>
+<p>Keys <cite>before</cite>, <cite>after</cite> and <cite>between</cite> at the moment support two
+different timeformats either <cite>%d-%m-%Y %H:%M</cite> or <cite>%d-%m-%Y</cite>. These
+keys also support special string <cite>NOW</cite> which can be used especially
+together with keyword <code class="docutils literal notranslate"><span class="pre">Wait</span> <span class="pre">for</span> <span class="pre">message</span>&#160; <span class="pre">criterion=after:NOW</span></code>.</p>
+<p>When giving time which includes hours and minutes then the whole
+time string needs to be enclosed into single quotes.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>before:25-02-2022
+after:NOW
+between:<span class="s1">&#39;31-12-2021 23:50 and 01-01-2022 00:10&#39;</span>
+</pre></div>
+</div>
+<p>Different criterion keys can be combined.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>subject_contains:<span class="s1">&#39;new year&#39;</span><span class="w"> </span>between:<span class="s1">&#39;31-12-2021 23:50 and 01-01-2022 00:10&#39;</span>
+</pre></div>
+</div>
+<p>Please <strong>note</strong> that all values in the criterion that contain spaces need
+to be enclosed within single quotes.</p>
+<p>In the following example the email <cite>subject</cite> is going to matched
+only against <cite>new</cite> not <cite>new year</cite>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>subject_contains:new<span class="w"> </span>year
+</pre></div>
+</div>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="RPA.Email.Exchange.Exchange.ROBOT_LIBRARY_DOC_FORMAT">
+<span class="sig-name descname"><span class="pre">ROBOT_LIBRARY_DOC_FORMAT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'REST'</span></em><a class="headerlink" href="#RPA.Email.Exchange.Exchange.ROBOT_LIBRARY_DOC_FORMAT" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="RPA.Email.Exchange.Exchange.ROBOT_LIBRARY_SCOPE">
+<span class="sig-name descname"><span class="pre">ROBOT_LIBRARY_SCOPE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'GLOBAL'</span></em><a class="headerlink" href="#RPA.Email.Exchange.Exchange.ROBOT_LIBRARY_SCOPE" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="RPA.Email.Exchange.Exchange.TO_PROTECT">
+<span class="sig-name descname"><span class="pre">TO_PROTECT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['authorize',</span> <span class="pre">'get_oauth_token',</span> <span class="pre">'refresh_oauth_token']</span></em><a class="headerlink" href="#RPA.Email.Exchange.Exchange.TO_PROTECT" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.Email.Exchange.Exchange.authorize">
+<span class="sig-name descname"><span class="pre">authorize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">username</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autodiscover</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">access_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">AccessType</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">AccessType.DELEGATE</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">server</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">primary_smtp_address</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_oauth</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">client_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">client_secret</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#RPA.Email.Exchange.Exchange.authorize" title="Permalink to this definition"></a></dt>
+<dd><p>Connect to Exchange account</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>username</strong> – account username</p></li>
+<li><p><strong>password</strong> – account password (can be skipped with OAuth2)</p></li>
+<li><p><strong>autodiscover</strong> – use autodiscover or set it off (on by default)</p></li>
+<li><p><strong>access_type</strong> – default “DELEGATE”, other option “IMPERSONATION”</p></li>
+<li><p><strong>server</strong> – required for configuration setting (with <cite>autodiscover</cite> off)</p></li>
+<li><p><strong>primary_smtp_address</strong> – by default set to username, but can be
+set to be different from username</p></li>
+<li><p><strong>is_oauth</strong> – use the OAuth2 authorization code flow (instead of basic auth)</p></li>
+<li><p><strong>client_id</strong> – registered application ID</p></li>
+<li><p><strong>client_secret</strong> – registered application secret (password)</p></li>
+<li><p><strong>token</strong> – contains access and refresh tokens, type, scope, expiry etc.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.Email.Exchange.Exchange.create_folder">
+<span class="sig-name descname"><span class="pre">create_folder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">folder_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent_folder</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.Email.Exchange.Exchange.create_folder" title="Permalink to this definition"></a></dt>
+<dd><p>Create email folder.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>folder_name</strong> – name for the new folder (required)</p></li>
+<li><p><strong>parent_folder</strong> – name for the parent folder, by default INBOX</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.Email.Exchange.Exchange.delete_folder">
+<span class="sig-name descname"><span class="pre">delete_folder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">folder_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent_folder</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.Email.Exchange.Exchange.delete_folder" title="Permalink to this definition"></a></dt>
+<dd><p>Delete email folder.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>folder_name</strong> – current folder name (required)</p></li>
+<li><p><strong>parent_folder</strong> – name for the parent folder, by default INBOX</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.Email.Exchange.Exchange.empty_folder">
+<span class="sig-name descname"><span class="pre">empty_folder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">folder_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent_folder</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delete_sub_folders</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.Email.Exchange.Exchange.empty_folder" title="Permalink to this definition"></a></dt>
+<dd><p>Empty email folder of all items</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>folder_name</strong> – current folder name (required)</p></li>
+<li><p><strong>parent_folder</strong> – name for the parent folder, by default INBOX</p></li>
+<li><p><strong>delete_sub_folders</strong> – delete sub folders or not, by default False</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if operation was successful, False if not</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.Email.Exchange.Exchange.generate_oauth_url">
+<span class="sig-name descname"><span class="pre">generate_oauth_url</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">client_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#RPA.Email.Exchange.Exchange.generate_oauth_url" title="Permalink to this definition"></a></dt>
+<dd><p>Generates an authorization URL which must be opened by the user to start the
+OAuth2 flow and obtain an authorization code as response.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>client_id</strong> – Client app ID. (generated by the provider)</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Authorization URL string not containing any sensitive info in it.</p>
+</dd>
+</dl>
+<p><strong>Example: Robot Framework</strong></p>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="gh">*** Tasks ***</span>
+<span class="gu">Start OAuth Flow</span>
+<span class="p">    ${</span><span class="nv">auth_url</span><span class="p">} =    </span><span class="nf">Generate OAuth URL</span>
+<span class="p">    ...     </span><span class="s">client_id=810482312368-19htmcgcj*******googleusercontent.com</span>
+<span class="p">    </span><span class="nf">Log</span><span class="p">     </span><span class="s">Start OAuth2 flow: </span><span class="p">${</span><span class="nv">auth_url</span><span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.Email.Exchange.Exchange.get_oauth_token">
+<span class="sig-name descname"><span class="pre">get_oauth_token</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">client_secret</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">response_url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#RPA.Email.Exchange.Exchange.get_oauth_token" title="Permalink to this definition"></a></dt>
+<dd><p>Exchanges the code obtained previously with <code class="docutils literal notranslate"><span class="pre">Generate</span> <span class="pre">OAuth</span> <span class="pre">URL</span></code> for a
+token.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client_secret</strong> – Client app secret. (generated by the provider)</p></li>
+<li><p><strong>response_url</strong> – The final URL containing the authorization <cite>code</cite> found in
+the address bar after authenticating and authorizing the Client app
+through the authorization URL.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A dictionary containing the access &amp; refresh token, plus metadata.</p>
+</dd>
+</dl>
+<p><strong>Example: Robot Framework</strong></p>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="gh">*** Tasks ***</span>
+<span class="gu">Finish OAuth Flow</span>
+<span class="p">    ${</span><span class="nv">token</span><span class="p">} =      </span><span class="nf">Get OAuth Token</span>
+<span class="p">    ...     </span><span class="s">client_secret=GOCSPX-******mqZAW89</span>
+<span class="p">    ...     </span><span class="s">response_url=</span><span class="p">${</span><span class="nv">resp_url</span><span class="p">}  </span><span class="c"># redirect of `Generate OAuth URL`</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.Email.Exchange.Exchange.list_messages">
+<span class="sig-name descname"><span class="pre">list_messages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">folder_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">criterion</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">contains</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">count</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">items_only</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#RPA.Email.Exchange.Exchange.list_messages" title="Permalink to this definition"></a></dt>
+<dd><p>List messages in the account inbox. Order by descending
+received time.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>folder_name</strong> – name of the email folder, default INBOX</p></li>
+<li><p><strong>criterion</strong> – list messages matching criterion</p></li>
+<li><p><strong>contains</strong> – if matching should be done using <cite>contains</cite> matching
+and not <cite>equals</cite> matching, default <cite>False</cite> is means <cite>equals</cite> matching</p></li>
+<li><p><strong>count</strong> – number of messages to list</p></li>
+<li><p><strong>save_dir</strong> – set to path where attachments should be saved,
+default None (attachments are not saved)</p></li>
+<li><p><strong>items_only</strong> – return only list of Message objects (instead of dictionaries)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.Email.Exchange.Exchange.list_unread_messages">
+<span class="sig-name descname"><span class="pre">list_unread_messages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">folder_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">criterion</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">contains</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">count</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#RPA.Email.Exchange.Exchange.list_unread_messages" title="Permalink to this definition"></a></dt>
+<dd><p>List unread messages in the account inbox. Order by descending
+received time.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>folder_name</strong> – name of the email folder, default INBOX</p></li>
+<li><p><strong>criterion</strong> – list messages matching criterion</p></li>
+<li><p><strong>contains</strong> – if matching should be done using <cite>contains</cite> matching
+and not <cite>equals</cite> matching, default <cite>False</cite> is means <cite>equals</cite> matching</p></li>
+<li><p><strong>count</strong> – number of messages to list</p></li>
+<li><p><strong>save_dir</strong> – set to path where attachments should be saved,
+default None (attachments are not saved)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.Email.Exchange.Exchange.move_message">
+<span class="sig-name descname"><span class="pre">move_message</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.Email.Exchange.Exchange.move_message" title="Permalink to this definition"></a></dt>
+<dd><p>Move a message into target folder</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>msg</strong> – dictionary of the message</p></li>
+<li><p><strong>target</strong> – path to target folder</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>AttributeError</strong> – if <cite>msg</cite> is not a dictionary containing
+<cite>id</cite> and <cite>changekey</cite> attributes</p>
+</dd>
+</dl>
+<p>Example:</p>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="c">${messages}=</span><span class="p">    </span><span class="c">List Messages</span>
+<span class="c">...</span><span class="p">    </span><span class="c">INBOX</span>
+<span class="c">...</span><span class="p">    </span><span class="c">criterion=subject:about my orders</span>
+<span class="c">FOR</span><span class="p">    </span><span class="c">${msg}</span><span class="p">    </span><span class="c">IN</span><span class="p">    </span><span class="c">@{messages}</span>
+<span class="p">    </span><span class="c">Run Keyword If</span><span class="p">    </span><span class="c">&quot;${msg}[sender][email_address]&quot;==&quot;${priority_account}&quot;</span>
+<span class="p">    </span><span class="c">...</span><span class="p">    </span><span class="c">Move Message</span><span class="p">    </span><span class="c">${msg}</span><span class="p">    </span><span class="c">target=INBOX / Problems / priority</span>
+<span class="c">END</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.Email.Exchange.Exchange.move_messages">
+<span class="sig-name descname"><span class="pre">move_messages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">criterion</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">contains</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#RPA.Email.Exchange.Exchange.move_messages" title="Permalink to this definition"></a></dt>
+<dd><p>Move message(s) from source folder to target folder</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>criterion</strong> – move messages matching this criterion</p></li>
+<li><p><strong>source</strong> – source folder</p></li>
+<li><p><strong>target</strong> – target folder</p></li>
+<li><p><strong>contains</strong> – if matching should be done using <cite>contains</cite> matching
+and not <cite>equals</cite> matching, default <cite>False</cite> is means <cite>equals</cite> matching</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>boolean result of operation, True if 1+ items were moved else False</p>
+</dd>
+</dl>
+<p>Criterion examples:</p>
+<ul class="simple">
+<li><p>subject:my message subject</p></li>
+<li><p>body:something in body</p></li>
+<li><p>sender:sender&#64;domain.com</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.Email.Exchange.Exchange.refresh_oauth_token">
+<span class="sig-name descname"><span class="pre">refresh_oauth_token</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">client_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">client_secret</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#RPA.Email.Exchange.Exchange.refresh_oauth_token" title="Permalink to this definition"></a></dt>
+<dd><p>Refreshes the token as the access one usually expires after 1h and the
+refresh one never expires. (as long as it doesn’t get revoked)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>client_id</strong> – Client app ID. (generated by the provider)</p></li>
+<li><p><strong>client_secret</strong> – Client app secret. (generated by the provider)</p></li>
+<li><p><strong>token</strong> – Full token dictionary previously obtained with
+<code class="docutils literal notranslate"><span class="pre">Get</span> <span class="pre">OAuth</span> <span class="pre">Token</span></code>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A token dictionary containing a new access token and updated
+metadata.</p>
+</dd>
+</dl>
+<p><strong>Example: Robot Framework</strong></p>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="gh">*** Tasks ***</span>
+<span class="gu">Refresh OAuth Flow</span>
+<span class="p">    ${</span><span class="nv">token</span><span class="p">} =      </span><span class="nf">Refresh OAuth Token</span>
+<span class="p">    ...     </span><span class="s">client_id=810482312368-19htmcgcj*******googleusercontent.com</span>
+<span class="p">    ...     </span><span class="s">client_secret=GOCSPX-******mqZAW89</span>
+<span class="p">    ...     </span><span class="s">token=</span><span class="p">${</span><span class="nv">token</span><span class="p">}  </span><span class="c"># from `Get OAuth Token`</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.Email.Exchange.Exchange.rename_folder">
+<span class="sig-name descname"><span class="pre">rename_folder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">oldname</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">newname</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent_folder</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.Email.Exchange.Exchange.rename_folder" title="Permalink to this definition"></a></dt>
+<dd><p>Rename email folder</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>oldname</strong> – current folder name</p></li>
+<li><p><strong>newname</strong> – new name for the folder</p></li>
+<li><p><strong>parent_folder</strong> – name for the parent folder, by default INBOX</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if operation was successful, False if not</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.Email.Exchange.Exchange.save_attachments">
+<span class="sig-name descname"><span class="pre">save_attachments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attachments_from_emls</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overwrite</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#RPA.Email.Exchange.Exchange.save_attachments" title="Permalink to this definition"></a></dt>
+<dd><p>Save attachments from message into given directory.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>message</strong> – dictionary or .eml file path containing message details</p></li>
+<li><p><strong>save_dir</strong> – file path where attachments will be saved</p></li>
+<li><p><strong>attachments_from_emls</strong> – pass <cite>True</cite> if the attachment is an EML file (for
+saving attachments from that EML file instead), <cite>False</cite> otherwise (default)</p></li>
+<li><p><strong>overwrite</strong> – overwrite existing downloaded attachments with the same name
+if set to <cite>True</cite>, <cite>False</cite> otherwise (default)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list of saved attachments</p>
+</dd>
+</dl>
+<p>Example:</p>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="c">${messages} =</span><span class="p">    </span><span class="c">List Messages</span>
+<span class="c">FOR</span><span class="p">    </span><span class="c">${msg}</span><span class="p">    </span><span class="c">IN</span><span class="p">    </span><span class="c">@{messages}</span>
+<span class="p">    </span><span class="c">Save Attachments</span><span class="p">    </span><span class="c">${msg}</span><span class="p">    </span><span class="c">%{ROBOT_ARTIFACTS}</span>
+<span class="p">    </span><span class="c">...</span><span class="p">    </span><span class="c">attachments_from_emls=${True}</span>
+<span class="c">END</span>
+
+<span class="c">${attachments} =</span><span class="p">    </span><span class="c">Save Attachments</span><span class="p">    </span><span class="c">${CURDIR}${/}saved.eml</span>
+<span class="c">...</span><span class="p">    </span><span class="c">%{ROBOT_ARTIFACTS}</span><span class="p">    </span><span class="c">overwrite=${True}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.Email.Exchange.Exchange.save_message">
+<span class="sig-name descname"><span class="pre">save_message</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.Email.Exchange.Exchange.save_message" title="Permalink to this definition"></a></dt>
+<dd><p>Save email as .eml file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>message</strong> – dictionary containing message details</p></li>
+<li><p><strong>filename</strong> – name of the file to save message into</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.Email.Exchange.Exchange.send_message">
+<span class="sig-name descname"><span class="pre">send_message</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">recipients</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subject</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attachments</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">html</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">images</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bcc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reply_to</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#RPA.Email.Exchange.Exchange.send_message" title="Permalink to this definition"></a></dt>
+<dd><p>Keyword for sending message through connected Exchange account.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>recipients</strong> – list of email addresses</p></li>
+<li><p><strong>subject</strong> – message subject, defaults to “”</p></li>
+<li><p><strong>body</strong> – message body, defaults to “”</p></li>
+<li><p><strong>attachments</strong> – list of filepaths to attach, defaults to <cite>None</cite></p></li>
+<li><p><strong>html</strong> – if message content is in HTML, default <cite>False</cite></p></li>
+<li><p><strong>images</strong> – list of filepaths for inline use, defaults to <cite>None</cite></p></li>
+<li><p><strong>cc</strong> – list of email addresses</p></li>
+<li><p><strong>bcc</strong> – list of email addresses</p></li>
+<li><p><strong>save</strong> – is sent message saved to Sent messages folder or not,
+defaults to False</p></li>
+<li><p><strong>reply_to</strong> – email address to reply to</p></li>
+</ul>
+</dd>
+</dl>
+<p>Email addresses can be prefixed with <code class="docutils literal notranslate"><span class="pre">ex:</span></code> to indicate an Exchange
+account address.</p>
+<p>At least one target needs to exist for <cite>recipients</cite>, <cite>cc</cite> or <cite>bcc</cite>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.Email.Exchange.Exchange.send_reply_message">
+<span class="sig-name descname"><span class="pre">send_reply_message</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">Message</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subject</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reply_all</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.Email.Exchange.Exchange.send_reply_message" title="Permalink to this definition"></a></dt>
+<dd><p>Send reply to a message.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>message</strong> – either Message object or ID of the message
+for the message which this is replying to</p></li>
+<li><p><strong>body</strong> – message body for the reply</p></li>
+<li><p><strong>subject</strong> – optional subject for the reply, defaults to None</p></li>
+<li><p><strong>reply_all</strong> – if <cite>True</cite> then reply is sent to all recipients,
+defaults to False</p></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Robot Framework example</strong></p>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="c">${messages}=</span><span class="p">    </span><span class="c">List Messages</span><span class="p">    </span><span class="c">criterion=subject:&#39;I have new query&#39;</span>
+<span class="c">FOR</span><span class="p">    </span><span class="c">${m}</span><span class="p">    </span><span class="c">IN</span><span class="p">    </span><span class="c">@{messages}</span>
+<span class="p">    </span><span class="c"># Verifying that this is email that I want to reply to</span>
+<span class="p">    </span><span class="c">${now}=</span><span class="p">    </span><span class="c">RPA.Calendar.Time Now</span><span class="p">   </span><span class="c">UTC</span><span class="p">  </span><span class="c">return_format=YYYY-MM-DD HH:mm</span>
+<span class="p">    </span><span class="c">${received}=</span><span class="p">    </span><span class="c">Evaluate</span><span class="p">    </span><span class="c">str($m[&quot;datetime_received&quot;])</span>
+<span class="p">    </span><span class="c">${diff}=</span><span class="p">   </span><span class="c">RPA.Calendar.Time Difference In Minutes</span><span class="p">   </span><span class="c">${received}</span><span class="p">  </span><span class="c">${now}</span>
+<span class="p">    </span><span class="c"># message was received less than 5 minutes</span>
+<span class="p">    </span><span class="c"># and it came from the expected address</span>
+<span class="p">    </span><span class="c">IF</span><span class="p">    </span><span class="c">$diff &lt; 5 and &quot;${m}[sender]&quot; == &quot;mika@robocorp.com&quot;</span>
+<span class="p">        </span><span class="c">Send Reply Message</span>
+<span class="p">        </span><span class="c">...</span><span class="p">  </span><span class="c">${m}[id]</span>
+<span class="p">        </span><span class="c">...</span><span class="p">  </span><span class="c">body=I totally agree</span>
+<span class="p">    </span><span class="c">END</span>
+<span class="c">END</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="RPA.Email.Exchange.Exchange.wait_for_message">
+<span class="sig-name descname"><span class="pre">wait_for_message</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">criterion</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">5.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interval</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">contains</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Any</span></span></span><a class="headerlink" href="#RPA.Email.Exchange.Exchange.wait_for_message" title="Permalink to this definition"></a></dt>
+<dd><p>Wait for email matching <cite>criterion</cite> to arrive into INBOX.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>criterion</strong> – wait for message matching criterion</p></li>
+<li><p><strong>timeout</strong> – total time in seconds to wait for email, defaults to 5.0</p></li>
+<li><p><strong>interval</strong> – time in seconds for new check, defaults to 1.0 (minimum)</p></li>
+<li><p><strong>contains</strong> – if matching should be done using <cite>contains</cite> matching
+and not <cite>equals</cite> matching, default <cite>False</cite> is means <cite>equals</cite> matching
+THIS PARAMETER IS DEPRECATED AS OF rpaframework 12.9.0</p></li>
+<li><p><strong>save_dir</strong> – set to path where attachments should be saved,
+default None (attachments are not saved)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list of messages</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+          </div>
+	<div id="cookieConsentContainer">
+  <div class="cookieDesc">
+    <p>
+      This website uses cookies to enhance the user experience.
+      By using the website you accept the use of cookies.
+      You can check our <a href="https://robocorp.com/privacy-policy">Privacy Policy</a> to learn more.
+    </p>
+  </div>
+  <div class="cookieButton">
+    <a onClick="cookieDismiss();">
+      I understand
+    </a>
+  </div>
+</div>
+	<div id="robocorpBanner">
+  <div id="bannerContent">
+    <div id="bannerDismiss">
+      <a onClick="bannerDismiss();">
+        <img src="/_static/icon_cross.svg"/>
+      </a>
+    </div>
+    <a href="https://robocorp.com">
+      <img id="bannerLogo" src="https://cdn.robocorp.com/brand/Logo/Negative logo transparent/Negative logo transparent.svg"/>
+    </a>
+    <span id="bannerText">
+      The automation stack for RPA Framework.
+    </span>
+    <a id="bannerButton" href="https://robocorp.com/get-started">
+      Get started <img src="/_static/icon_arrow.svg"/>
+    </a>
+  </div>
+</div>
+
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Email.Exchange" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../email_imapsmtp/index.html" class="btn btn-neutral float-right" title="Email.ImapSmtp" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023 Robocorp Technologies, Inc..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
