@@ -12,8 +12,58 @@ Latest versions
 `Upcoming release <https://github.com/robocorp/rpaframework/projects/3#column-16713994>`_
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+
 `Released <https://pypi.org/project/rpaframework/#history>`_
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+28.3.0 - 22 Feb 2024
+--------------------
+
+- Library **RPA.Excel.Application** (:pr:`1152`): Add keyword ``Write data to range`` for writing data to
+  range(s) in a spreadsheet. This will be significantly faster than using ``Write to cells`` keyword
+  for large data sets.
+- Library **RPA.Word.Application** (:pr:`1152`):
+
+  - Add keywords starting with ``Move_`` for positioning cursor position in a document.
+  - Add keyword ``Find text`` for finding text in a document.
+  - Add keyword ``Paste from clipboard`` for pasting text from clipboard to a current cursor position.
+  - Add keyword ``Get current line`` to get text from the current line.
+  - Add keyword ``Get number of lines`` to get number of lines in a current document.
+  - Refactor keyword ``Write text`` to take cursor positioning into consideration.
+
+28.2.0 - 02 Feb 2024
+--------------------
+
+- Library **RPA.Excel.Application** (:pr:`1149`):
+
+  - Add new keyword ``Create Pivot Field`` for creating pivot fields for the pivot table.
+  - Add new keyword ``Create Pivot Table`` for creating pivot tables in a spreadsheet.
+  - Add new keyword ``Create Table`` for creating a table in a spreadsheet.
+  - Add new keyword ``Find`` for finding a value in a range.
+  - Add new keyword ``Get Pivot Tables`` for getting pivot tables in a spreadsheet.
+  - Add new keyword ``Get Range`` for getting a range in a spreadsheet.
+  - Add new keyword ``List Tables`` for listing tables in a spreadsheet.
+
+- For all **RPA.*.Application** libraries (:pr:`1149`): Add new utility keyword for
+  Robot Framework syntax ``Set Object Property``
+
+- Security dependency fix given the bump of ``cryptography`` package to version **42.0.2**.
+  (:pr:`1149`)
+
+17 Jan 2024
+-----------
+
+- Library **RPA.Cloud.Google** (:pr:`1145`, ``rpaframework-google`` **8.2.0**):
+
+  - All ``init_`` keywords will return initialized ``service`` instance.
+  - Library level documentation refactoring. Authentication related examples are now
+    in their own markdown file.
+
+28.1.0 - 12 Jan 2024
+--------------------
+
+- Library **RPA.Outlook.Application** (:pr:`1144`): Add ``reply_to`` and ``check_names``
+  parameters for ``Send Email``.
 
 28.0.0 - 18 Dec 2023
 --------------------
