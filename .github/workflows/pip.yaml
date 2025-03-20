@@ -22,8 +22,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: ["ubuntu-22.04"] # seems like ubuntu-latest can be unstable, using 22.04 for now
-        python-version: [3.9.13, 3.10.16, 3.11.11, 3.12.9]
+        os: ["ubuntu-22.04", "windows-latest"] # seems like ubuntu-latest can be unstable, using 22.04 for now
+        python-version: [3.9.13, 3.10.16, 3.11.9, 3.12.9]
         pip-version: [22.1.2, 23.0.1, 24.2, 25.0.1]
         # test the latest template on macos and windows, and other pip versions and pythons on ubuntu for speed
         # adding macos and windows to the matrix adds a bunch of running and delay because of mac and windows
@@ -32,10 +32,6 @@ jobs:
           - os: macos-13
             python-version: "3.11.9"
             pip-version: "25.0.1"
-          - os: windows-latest
-            python-version: "3.11.9"
-            pip-version: "25.0.1"
-
         exclude:
         # these combinations are known to fail, Python 3.12 seems to require pip>=24
           - python-version: "3.12.9"
